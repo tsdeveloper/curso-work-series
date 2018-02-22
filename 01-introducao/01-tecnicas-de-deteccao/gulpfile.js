@@ -56,7 +56,7 @@ gulp.task('browser-sync', function() {
   gulp.task('browser-sync', function() {
     bs.init(files,{
                proxy: "http://upinside.test:8080", // makes a proxy for localhost:8080              
-               files: ["**/*.php"],
+               files: ["**/**/*.php"],
                // Customise the placement of the snippet
 //         // and ignore certain paths
         snippetOptions: {
