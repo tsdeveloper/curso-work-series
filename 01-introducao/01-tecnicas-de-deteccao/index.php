@@ -34,12 +34,12 @@
     </div>
 
     <!-- inject:js -->
+    <script src="public/assets/js/jquery/dist/jquery.min.js"></script>
+    <script src="public/assets/js/jquery/dist/jquery.mask.min.js"></script>
 
     <script src="public/assets/js/modernizr/modernizr.custom.js"></script>
 
     <script src="public/assets/js/html5shiv/dist/html5shiv.min.js"></script>
-
-    <script src="public/assets/js/jquery/dist/jquery.min.js"></script>
 
     <script src="public/assets/js/bootstrap/dist/js/bootstrap.min.js"></script>
 
@@ -49,6 +49,7 @@
         $(function () {
             function teste(texto) {
                 $('.mb-0').append(texto);
+                
 
             }
             if (Modernizr.localstorage)
@@ -60,10 +61,16 @@
             if (Modernizr.input.placeholder)
                 teste('Active placeholder<br/>')
 
-            if (Modernizr.inputtypes.date)
+            if (Modernizr.inputtypes.date){
                 teste('Active inputtypes date<br/>')
-            else
+                $('.mb-0').append('<input type="date" name="date" id="date" placeholder="Set your date" />');
+            }                
+            else{
                 teste('No Active inputtypes date<br/>')
+                $('.mb-0').append('<input type="text" name="date" id="date" placeholder="Set your date" />');
+                $('#date').mask('00/00/0000');
+            }
+                
 
         })
     </script>
