@@ -14,7 +14,7 @@ define('BASE', 'http://upinside.test:8080');
         <!-- inject:css -->
         <link rel="stylesheet" href="public/assets/css/style.min.css">
         <link rel="stylesheet" href="public/assets/css/bootstrap/dist/css/bootstrap-reboot.min.css">
-        <link rel="stylesheet" href="public/assets/css/bootstrap/dist/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="public/assets/css/bootstrap/dist/css/bootstrap.min.css"> -->
         <!-- endinject -->
         <link rel="shortcut icon" href="resources/assets/img/html5-logo.ico" />
         <!--[if lt IE 9]>
@@ -94,32 +94,39 @@ define('BASE', 'http://upinside.test:8080');
                     <article>
                         <div class="thumb">
                             <div class="video_play"></div>
-                            <img title="" src="" alt="">
+                            <img src="resources/assets/img/angularjs.png" alt="Angular JS" title="Framework Angular JS">
+                      
                         </div>
-                        <h1>Entendo o HTML5</h1>
+                        <h1>Angular JS</h1>
                     </article>
+
+                   <article>
+                        <div class="thumb">
+                            <div class="video_play"></div>
+                            <img src="resources/assets/img/nodejs.png" alt="Node JS" title="Framework Node JS">
+                      
+                        </div>
+                        <h1>Node JS</h1>
+                    </article>
+
 
                     <article>
                         <div class="thumb">
                             <div class="video_play"></div>
-                            <img title="" src="" alt="">
+                            <img src="resources/assets/img/sass-logo.png" alt="Sass JS" title="Framework Sass JS">
+                      
                         </div>
-                        <h1>Entendo o HTML5</h1>
+                        <h1>SASS CSS</h1>
                     </article>
-                    <article>
-                        <div class="thumb">
-                            <div class="video_play"></div>
-                            <img title="" src="" alt="">
-                        </div>
-                        <h1>Entendo o HTML5</h1>
-                    </article>
+
 
                     <article>
                         <div class="thumb">
                             <div class="video_play"></div>
-                            <img title="" src="" alt="">
+                            <img src="resources/assets/img/bower-logo.png" alt="Bower JS" title="Framework Bower JS">
+                      
                         </div>
-                        <h1>Entendo o HTML5</h1>
+                        <h1>Bower JS</h1>
                     </article>
                     <div class="clear"></div>
                 </section>
@@ -131,7 +138,7 @@ define('BASE', 'http://upinside.test:8080');
             <!-- container do title -->
             <div class="content">
                 <hgroup>
-                    <h1>Conheça as Tecnologias apresentadas</h1>
+                    <h1>Conheça as Tecnologias JS e CSS</h1>
                     <h2>Sobre o Curso HTML5 Pro</h2>
                 </hgroup>
                 <div class="clear"></div>
@@ -142,47 +149,44 @@ define('BASE', 'http://upinside.test:8080');
 
                 <div class="content">
                     <article>
-                        <img src="" alt="" title="">
-                        <h1>New Doctype</h1>
+                        <img src="resources/assets/img/angularjs.png" alt="Angular JS" title="Framework Angular JS">
+                        <h1>Angular JS</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
                     <article>
-                        <img src="" alt="" title="">
-                        <h1>To Quote or Not to Quote</h1>
-                        <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro
-
-                        </p>
+                        <img src="resources/assets/img/bower-logo.png" alt="Bower JS" title="Framework Bower JS">
+                        <h1>Bower JS</h1>
+                        <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
-                    <article>
-                        <img src="" alt="" title="">
-                        <h1>The Figure Element</h1>
-                        <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                     <article>
+                        <img src="resources/assets/img/sass-logo.png" alt="Sass JS" title="Framework Sass JS">
+                        <h1>Sass CSS</h1>
+                        <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
-                    <article>
-                        <img src="" alt="" title="">
-                        <h1>
-                            <small> Redefined</h1>
-                        <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                     <article>
+                        <img src="resources/assets/img/knockoutjs.png" alt="Knockout JS" title="Framework Knockout JS">
+                        <h1>Knockout JS</h1>
+                        <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
-                    <article>
-                        <img src="" alt="" title="">
-                        <h1>Placeholders</h1>
-                        <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                     <article>
+                        <img src="resources/assets/img/nodejs.png" alt="Node JS" title="Framework Node JS">
+                        <h1>Node JS</h1>
+                        <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
-                    <article>
-                        <img src="" alt="" title="">
-                        <h1>Email Inputs</h1>
-                        <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                     <article>
+                        <img src="resources/assets/img/webpack-javascript-logo.png" alt="WebPack JS" title="Framework WebPack JS">
+                        <h1>WebPack</h1>
+                        <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
-                    <article>
-                        <img src="" alt="" title="">
-                        <h1>Make your Content Editable</h1>
-                        <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                     <article>
+                        <img src="resources/assets/img/vuejs.png" alt="Vue JS" title="Framework Vue JS">
+                        <h1>Vue JS</h1>
+                        <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
                 </div>
@@ -225,9 +229,34 @@ define('BASE', 'http://upinside.test:8080');
             </div>
         </section>
 
+        <!-- retormada e conversão -->
+        <article class="container bg-gray">
+            <div class="content">
+                <header>
+                    <h1>Faça parte da turma de HTML 5 Pro</h1>
+                    <h2>Começe agora mesmo. O Curo é de
+                        <mark>HTML Pro EAD</mark>
+                    </h2>
+                </header>
+
+                <a href="#" title="Curso Work Series - HTML 5 do Jeito Certo" target="_blank">Curso Work Series - HTML 5 do Jeito Certo</a>
+                <footer></footer>
+                <div>Estudo garantido EAD</div>
+                </footer>
+
+                <div class="clear"></div>
+            </div>
+        </article>
+
+    <!-- content visual -->
+<div class="container"></div>
+    <div class="content">
+        <div class="clear"></div>
+    </div>
+</div>
 
 
-        <!-- CONTEUDO -->
+        <!-- CONTEUDO  -->
         <footer class="container bg-light">
             <section class="main_footer content">
                 <h1 class="fontzero">Sobre HTML 5 Pro Treinamentos</h1>
@@ -289,9 +318,9 @@ define('BASE', 'http://upinside.test:8080');
 
         <!-- inject:js -->
         <script src="public/assets/js/Modernizr/modernizr.custom.js"></script>
-        <script src="public/assets/js/html5shiv/dist/html5shiv.min.js"></script>
         <script src="public/assets/js/jquery/dist/jquery.mask.min.js"></script>
         <script src="public/assets/js/jquery/dist/jquery.min.js"></script>
+        <script src="public/assets/js/html5shiv/dist/html5shiv.min.js"></script>
         <script src="public/assets/js/bootstrap/dist/js/bootstrap.min.js"></script>
         <!-- endinject -->
 
