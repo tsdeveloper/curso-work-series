@@ -256,7 +256,14 @@ define('BASE', 'http://upinside.test:8080');
 </div>
 
 
-        <!-- CONTEUDO  -->
+/**
+ *
+ * Block comment
+ *
+ */
+
+
+        <!-- CONTEUDO     -->
         <footer class="container bg-light">
             <section class="main_footer content">
                 <h1 class="fontzero">Sobre HTML 5 Pro Treinamentos</h1>
