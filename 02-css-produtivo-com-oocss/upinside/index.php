@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-define('BASE', 'http://upinside.test:8080');
+define('BASE', 'http://upinside.test');
 ?>
     <html lang="pt-br">
 
