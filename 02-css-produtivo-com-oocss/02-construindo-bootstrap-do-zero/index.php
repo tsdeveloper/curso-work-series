@@ -91,7 +91,7 @@ define('BASE', 'http://upinside.test');
                 <div class="clear"></div>
 
             </div>
-            <footer class="bg-green">
+            <footer class="bg-gray">
                 <section class="content">
                     <h1>Veja algumas aulas do Curso</h1>
                     <article>
