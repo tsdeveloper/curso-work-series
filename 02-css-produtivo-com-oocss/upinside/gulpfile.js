@@ -53,7 +53,6 @@ gulp.task('browser-sync', function() {
 
     //initialize bs
   // Static server
-  gulp.task('browser-sync', function() {
     bs.init(files,{
                proxy: "http://upinside.test", // makes a proxy for localhost:8080              
                files: ["**/**/*.php"],
@@ -99,7 +98,7 @@ gulp.task('browser-sync', function() {
 //             }
 //         }
 //     });
-});
+
 // // register the bs plugin to inject snippet
 // bs.use(require('bs-snippet-injector'), {
 //     // path to the file containing the closing </body> tag
