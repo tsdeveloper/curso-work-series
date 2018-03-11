@@ -67,8 +67,8 @@ define('BASE', 'http://upinside.test');
         </header>
 
 
-        <!-- CONTEUDO -->
-        <!-- BLOCO DE VÍDEO -->
+        <!-- conteudo -->
+        <!-- bloco de vídeo -->
         <article class="container">
             <div class="content">
                 <header>
@@ -136,7 +136,7 @@ define('BASE', 'http://upinside.test');
             </footer>
         </article>
 
-        <!-- SEÇÃO RELACIONAL -->
+        <!-- seção relacional -->
         <section class="container bg-orange">
             <!-- container do title -->
             <div class="content">
@@ -198,7 +198,7 @@ define('BASE', 'http://upinside.test');
 
 
 
-        <!-- -------- SECAO TEMÁTICA ---------->
+        <!--  secao temática -->
 
         <section class="container bg-blue-light">
             <div class="content">
@@ -259,7 +259,7 @@ define('BASE', 'http://upinside.test');
         </div>
         </div>
 
-        <!-- CONTEUDO     -->
+        <!-- conteudo     -->
         <footer class="container bg-light">
             <section class="main_footer content">
                 <h1 class="fontzero">Sobre HTML 5 Pro Treinamentos</h1>
