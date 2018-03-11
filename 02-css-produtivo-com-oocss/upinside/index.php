@@ -10,7 +10,7 @@ define('BASE', 'http://upinside.test');
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
         <title>Curso Work Series - HTML 5 do Jeito Certo</title>
-        
+
 
         <!-- inject:css -->
         <!-- <link rel="stylesheet" href="public/assets/css/normalize.css"> -->
@@ -98,16 +98,16 @@ define('BASE', 'http://upinside.test');
                         <div class="thumb">
                             <div class="video_play"></div>
                             <img src="resources/assets/img/angularjs.png" alt="Angular JS" title="Framework Angular JS">
-                      
+
                         </div>
                         <h1>Angular JS</h1>
                     </article>
 
-                   <article>
+                    <article>
                         <div class="thumb">
                             <div class="video_play"></div>
                             <img src="resources/assets/img/nodejs.png" alt="Node JS" title="Framework Node JS">
-                      
+
                         </div>
                         <h1>Node JS</h1>
                     </article>
@@ -117,7 +117,7 @@ define('BASE', 'http://upinside.test');
                         <div class="thumb">
                             <div class="video_play"></div>
                             <img src="resources/assets/img/sass-logo.png" alt="Sass JS" title="Framework Sass JS">
-                      
+
                         </div>
                         <h1>SASS CSS</h1>
                     </article>
@@ -127,7 +127,7 @@ define('BASE', 'http://upinside.test');
                         <div class="thumb">
                             <div class="video_play"></div>
                             <img src="resources/assets/img/bower-logo.png" alt="Bower JS" title="Framework Bower JS">
-                      
+
                         </div>
                         <h1>Bower JS</h1>
                     </article>
@@ -137,7 +137,7 @@ define('BASE', 'http://upinside.test');
         </article>
 
         <!-- SEÇÃO RELACIONAL -->
-        <section class="container">
+        <section class="container bg-orange">
             <!-- container do title -->
             <div class="content">
                 <hgroup>
@@ -148,7 +148,7 @@ define('BASE', 'http://upinside.test');
             </div>
 
             <!-- container dos artigos -->
-            <div class="container bg-gray">
+            <div class="container bg-body">
 
                 <div class="content">
                     <article>
@@ -162,31 +162,31 @@ define('BASE', 'http://upinside.test');
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
-                     <article>
+                    <article>
                         <img src="resources/assets/img/sass-logo.png" alt="Sass JS" title="Framework Sass JS">
                         <h1>Sass CSS</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
-                     <article>
+                    <article>
                         <img src="resources/assets/img/knockoutjs.png" alt="Knockout JS" title="Framework Knockout JS">
                         <h1>Knockout JS</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
-                     <article>
+                    <article>
                         <img src="resources/assets/img/nodejs.png" alt="Node JS" title="Framework Node JS">
                         <h1>Node JS</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
-                     <article>
+                    <article>
                         <img src="resources/assets/img/webpack-javascript-logo.png" alt="WebPack JS" title="Framework WebPack JS">
                         <h1>WebPack</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
-                     <article>
+                    <article>
                         <img src="resources/assets/img/vuejs.png" alt="Vue JS" title="Framework Vue JS">
                         <h1>Vue JS</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
@@ -200,7 +200,7 @@ define('BASE', 'http://upinside.test');
 
         <!-- -------- SECAO TEMÁTICA ---------->
 
-        <section class="container">
+        <section class="container bg-blue-light">
             <div class="content">
                 <div class="ses_title">
                     <h1>Ficha Técnica</h1>
@@ -233,7 +233,7 @@ define('BASE', 'http://upinside.test');
         </section>
 
         <!-- retormada e conversão -->
-        <article class="container bg-gray">
+        <article class="container bg-orange">
             <div class="content">
                 <header>
                     <h1>Faça parte da turma de HTML 5 Pro</h1>
@@ -251,20 +251,13 @@ define('BASE', 'http://upinside.test');
             </div>
         </article>
 
-    <!-- content visual -->
-<div class="container"></div>
-    <div class="content">
-        <div class="clear"></div>
-    </div>
-</div>
-
-
-/**
- *
- * Block comment
- *
- */
-
+        <!-- content visual -->
+        <div class="container">
+        <div class="content">
+            CURSO HTML PRO
+            <div class="clear"></div>
+        </div>
+        </div>
 
         <!-- CONTEUDO     -->
         <footer class="container bg-light">
