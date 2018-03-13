@@ -210,7 +210,48 @@ function keepNonMinified(file) {
 }
 
 // Compile sass into CSS & auto-inject into browsers
-gulp.task('sass', function() {
+gulp.task('sass:boot', function() {
+
+    return gulp.src('resources/assets/sass/**/*.sass')
+        .pipe(errorNotifier())
+        // .pipe(sass({
+        //     style: 'compressed',
+        //     errLogToConsole: false,
+        //     onError: function(err) {
+        //         return notify().write(err);
+        //     }
+        // }))
+        // .pipe(sass({ errLogToConsole: false, }))
+        // .on('error', function(err) {
+        //     notify().write(err);
+        //     this.emit('end');
+        // })
+        .pipe(sass({}).on('error', function(err) {
+            return notify().write(err);
+        }))
+        .pipe(plumber())
+        .pipe(cleanCSS())
+        // .pipe(through(function() {
+        //     this.emit("error", new Error("Something happend: Error message!"))
+        // }))
+        // .on("error", notify.onError("Error: <%= error.message %>"))
+        // .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
+        // .pipe(through(function() {
+        //     this.emit("error", new Error("Something happend: Error message!"))
+        // }))
+        .pipe(concat('boot.min.css'))
+        .pipe(gulp.dest(config.publicCSS))
+        .pipe(bs.stream())
+        .pipe(notify({ message: 'Styles boot task complete' }));
+    // .pipe(notify({
+    //     title: 'Gulp',
+    //     subtitle: 'success',
+    //     message: 'Sass task',
+    //     sound: "Pop"
+    // }));
+});
+
+gulp.task('sass:style', function() {
 
     return gulp.src('resources/assets/sass/*.sass')
         .pipe(errorNotifier())
@@ -251,8 +292,8 @@ gulp.task('sass', function() {
     // }));
 });
 gulp.task('watch', function() {
-    gulp.watch('resources/assets/sass/**/*.sass', ['sass'])
+    gulp.watch('resources/assets/sass/**/*.sass', ['sass:style', 'sass:boot'])
     gulp.watch('*.html').on('change', bs.reload);
 });
 
-gulp.task('default', ['browser-sync','watch', 'sass', 'bower:buildlib']);
+gulp.task('default', ['browser-sync','watch', 'sass:style','sass:boot', 'bower:buildlib']);

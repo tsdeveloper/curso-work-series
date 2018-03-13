@@ -15,6 +15,7 @@ define('BASE', 'http://upinside.test');
         <!-- inject:css -->
         <link rel="stylesheet" href="public/assets/css/bootstrap/dist/css/bootstrap-reboot.min.css">
         <!-- <link rel="stylesheet" href="public/assets/css/bootstrap/dist/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="public/assets/css/boot.min.css">
         <link rel="stylesheet" href="public/assets/css/style.min.css">
         <!-- endinject -->
         
@@ -322,9 +323,8 @@ define('BASE', 'http://upinside.test');
 
         <!-- inject:js -->
         <script src="public/assets/js/Modernizr/modernizr.custom.js"></script>
-        <script src="public/assets/js/jquery/dist/jquery.mask.min.js"></script>
-        <script src="public/assets/js/jquery/dist/jquery.min.js"></script>
         <script src="public/assets/js/html5shiv/dist/html5shiv.min.js"></script>
+        <script src="public/assets/js/jquery/dist/jquery.min.js"></script>
         <script src="public/assets/js/bootstrap/dist/js/bootstrap.min.js"></script>
         <!-- endinject -->
 
