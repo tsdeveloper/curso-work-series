@@ -14,7 +14,7 @@ define('BASE', 'http://upinside.test');
 
         <!-- inject:css -->
         <link rel="stylesheet" href="public/assets/css/bootstrap/dist/css/bootstrap-reboot.min.css">
-        
+        <!-- <link rel="stylesheet" href="public/assets/css/bootstrap/dist/css/bootstrap.min.css"> -->
         <link rel="stylesheet" href="public/assets/css/style.min.css">
         <!-- endinject -->
         
@@ -27,7 +27,18 @@ define('BASE', 'http://upinside.test');
     </head>
 
     <body>
-
+<div class="trigger trigger-accept">
+    <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h1>
+</div>
+<div class="trigger trigger-alert">
+<h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h1>
+</div>
+<div class="trigger trigger-infor">
+<h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h1>
+</div>
+<div class="trigger trigger-error">
+<h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h1>
+</div>
 
         <header class="container bg-gray">
             <div class="content">
@@ -58,8 +69,9 @@ define('BASE', 'http://upinside.test');
                         <a href="<?=BASE;?>/micro-dados" title="Distribuição com Micro Dados">Micro Dados</a>
                     </li>
                     <li>
-                        <a href="<?=BASE;?>/sobre-curso" class="btn btn-green radius boxshadow" title="Sobre o Curso">Curso</a>
+                        <a href="<?=BASE;?>/sobre-curso" class="btn btn-yellow radius boxshadow" title="Sobre o Curso">Curso</a>
                     </li>
+                   
                 </ul>
 
                 <div class="clear"></div>
