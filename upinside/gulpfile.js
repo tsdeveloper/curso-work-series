@@ -150,7 +150,7 @@ gulp.task('bower:insertfiles', function (cb) {
     //   .pipe(gulp.dest(config.baseDirRoot))
      
      return  gulp.src(config.baseDirRoot + 'index.php')
-  .pipe(inject(gulp.src([config.publicJS + '/*.js',config.publicJS + '/**/*.js', config.publicCSS +'/*.css', config.publicCSS +'/**/*.css'], {read: false}), {relative: true}))
+  .pipe(inject(gulp.src([config.publicJS + '/*.js',config.publicJS + '/**/*.js', config.publicCSS +'/*.css', config.publicCSS +'/**/*.css', config.publicCSS +'**/**/*.css'], {read: false}), {relative: true}))
   .pipe(gulp.dest(config.baseDirRoot))
   .on("error", notify.onError("Error: <%= error.message %>"))
   .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }));
@@ -212,7 +212,7 @@ function keepNonMinified(file) {
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass:boot', function() {
 
-    return gulp.src('resources/assets/sass/**/*.sass')
+    return gulp.src('resources/assets/sass/dist/*.sass')
         .pipe(errorNotifier())
         // .pipe(sass({
         //     style: 'compressed',
@@ -240,7 +240,7 @@ gulp.task('sass:boot', function() {
         //     this.emit("error", new Error("Something happend: Error message!"))
         // }))
         .pipe(concat('boot.min.css'))
-        .pipe(gulp.dest(config.publicCSS))
+        .pipe(gulp.dest(config.publicCSS + '/dist/boot'))
         .pipe(bs.stream())
         .pipe(notify({ message: 'Styles boot task complete' }));
     // .pipe(notify({
@@ -292,7 +292,8 @@ gulp.task('sass:style', function() {
     // }));
 });
 gulp.task('watch', function() {
-    gulp.watch('resources/assets/sass/**/*.sass', ['sass:style', 'sass:boot'])
+    gulp.watch('resources/assets/sass/*.sass', ['sass:style'])
+    gulp.watch('resources/assets/sass/dist/*.sass', [ 'sass:boot'])
     gulp.watch('*.html').on('change', bs.reload);
 });
 

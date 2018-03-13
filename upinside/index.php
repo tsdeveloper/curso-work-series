@@ -15,8 +15,8 @@ define('BASE', 'http://upinside.test');
         <!-- inject:css -->
         <link rel="stylesheet" href="public/assets/css/bootstrap/dist/css/bootstrap-reboot.min.css">
         <!-- <link rel="stylesheet" href="public/assets/css/bootstrap/dist/css/bootstrap.min.css"> -->
-        <link rel="stylesheet" href="public/assets/css/boot.min.css">
         <link rel="stylesheet" href="public/assets/css/style.min.css">
+        <link rel="stylesheet" href="public/assets/css/dist/boot/boot.min.css">
         <!-- endinject -->
         
         <link rel="shortcut icon" href="resources/assets/img/html5-logo.ico" />
@@ -33,11 +33,11 @@ define('BASE', 'http://upinside.test');
         <header class="container bg-gray">
             <div class="content">
 
-                <h1 class="main_logo">
-                    <a title="home" href="">Curso Work Series - HTML 5 do Jeito Certo</a>
+                <h1 class="main_logo fl-left fontzero">
+                    <a class='radius' title="home" href="">Curso Work Series - HTML 5 do Jeito Certo</a>
                 </h1>
 
-                <ul class="main_nav">
+                <ul class="main_nav fl-right">
                     <li>
                         <a href="<?=BASE;?>/htm5-semnatico" title="Html5 semântico">Semântica</a>
 
@@ -95,7 +95,7 @@ define('BASE', 'http://upinside.test');
             </div>
             <footer class="bg-green">
                 <section class="content">
-                    <h1>Veja algumas aulas do Curso</h1>
+                    <h1>Veja alguMais aulas do Curso</h1>
                     <article>
                         <div class="thumb">
                             <div class="video_play"></div>
@@ -264,49 +264,48 @@ define('BASE', 'http://upinside.test');
         <!-- conteudo     -->
         <footer class="container bg-light">
             <section class="main_footer content">
-                <h1 class="fontzero">Sobre HTML 5 Pro Treinamentos</h1>
+                <h1 class="fontzero font-bold">Sobre HTML 5 Pro Treinamentos</h1>
 
-                <nav class="main_nav">
-                    <h1 class="title"> Mas sobre HTML5</h1>
+                <nav class="box box-medium">
+                    <h1 class="title"> Mais sobre HTML5</h1>
                     <ul>
                         <li>
-                            <a href="#apresentacao" title="Assista o vídeo de apresentação">Assista o Vídeo</a>
+                            <a class="shorticon shorticon-section" href="#apresentacao" title="Assista o vídeo de apresentação">Assista o Vídeo</a>
                         </li>
                         <li>
-                            <a href="#apresentacao" title="Assista o vídeo de apresentação">Assista o Vídeo</a>
+                            <a class="shorticon shorticon-section" href="#apresentacao" title="Assista o vídeo de apresentação">Assista o Vídeo</a>
                         </li>
                         <li>
-                            <a href="#apresentacao" title="Assista o vídeo de apresentação">Assista o Vídeo</a>
+                            <a class="shorticon shorticon-section" href="#apresentacao" title="Assista o vídeo de apresentação">Assista o Vídeo</a>
                         </li>
 
                     </ul>
                 </nav>
 
-                <article class="main_social">
-                    <h1 class="title">HTML 5</h1>
+                <article class="box box-medium">
+                    <h1 class="title font-bold">HTML 5</h1>
 
-                    <ul>
                         <li>
-                            <a target="_blank" rel="nofollow" href="http://facebook.com" title="Assista o vídeo de apresentação">Facebook</a>
+                            <a class="shorticon shorticon-facebook" target="_blank" rel="nofollow" href="http://facebook.com" title="Assista o vídeo de apresentação">Facebook</a>
                         </li>
                         <li>
-                            <a target="_blank" rel="nofollow" href="http://twitter.com" title="Assista o vídeo de apresentação">Twitter</a>
+                            <a class="shorticon shorticon-twitter" target="_blank" rel="nofollow" href="http://twitter.com" title="Assista o vídeo de apresentação">Twitter</a>
                         </li>
                         <li>
-                            <a target="_blank" rel="nofollow" href="http://youtube.com.br" title="Assista o vídeo de apresentação">Youtube</a>
+                            <a class="shorticon shorticon-youtube-plus" target="_blank" rel="nofollow" href="http://youtube.com.br" title="Assista o vídeo de apresentação">Youtube</a>
                         </li>
 
                     </ul>
                 </article>
 
-                <article class="main_copy">
+                <article class="box box-medium last">
                     <h1 class="fontzero">HTML 5 Pro</h1>
 
-                    <p>
+                    <p class="shorticon shorticon-config" >
                         <b>Plataform EAD:</b>
                         <a href="" title="Plataforma EAD HTML 5 Pro">Plataforma EAD HTML 5 Pro</a>
                     </p>
-                    <p>
+                    <p class="shorticon shorticon-email" >
                         <b>E-mail:</b>
                         <a href="mailto:email@email.com" title="Envie um email">email@email.com</a>
                     </p>
