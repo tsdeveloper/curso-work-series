@@ -14,11 +14,11 @@ define('BASE', 'http://upinside.test');
 
         <!-- inject:css -->
         <link rel="stylesheet" href="public/assets/css/bootstrap/dist/css/bootstrap-reboot.min.css">
-        <!-- <link rel="stylesheet" href="public/assets/css/bootstrap/dist/css/bootstrap.min.css"> -->
         <link rel="stylesheet" href="public/assets/css/style.min.css">
         <link rel="stylesheet" href="public/assets/css/dist/boot/boot.min.css">
+        <!-- <link rel="stylesheet" href="public/assets/css/bootstrap/dist/css/bootstrap.min.css"> -->
         <!-- endinject -->
-        
+
         <link rel="shortcut icon" href="resources/assets/img/html5-logo.ico" />
         <!--[if lt IE 9]>
     <script src="./bower_components/html5shiv/dist/html5shiv.min.js"></script>
@@ -61,7 +61,7 @@ define('BASE', 'http://upinside.test');
                     <li>
                         <a href="<?=BASE;?>/sobre-curso" class="btn btn-green radius boxshadow" title="Sobre o Curso">Curso</a>
                     </li>
-                   
+
                 </ul>
 
                 <div class="clear"></div>
@@ -74,7 +74,7 @@ define('BASE', 'http://upinside.test');
         <article class="container">
             <div class="content">
                 <header>
-                    <hgroup>
+                    <hgroup class="sectiontitle">
                         <h1>Conheça o Curso CSS Layout</h1>
                         <h2>Aprsentação Curso
                             <mark>HTML 5 Pro</mark>
@@ -84,19 +84,21 @@ define('BASE', 'http://upinside.test');
                 </header>
 
                 <!-- VIDEO -->
-                <video src="resources/assets/midias/apresentacao.mp4" width="400" controls></video>
-                <aside>
+                <video class="video video-large main_video video-shadow" src="resources/assets/midias/apresentacao.mp4" width="400" controls></video>
+                <aside class="al-center">
                     <h1>
-                        <a href="#" title="Buy HTML 5 Pro" target="_blank"> Buy</a> HTML 5 Pro</h1>
+                        <a href="#" class="btn btn-blue radius" title="Buy HTML 5 Pro" target="_blank"> Buy</a> HTML 5 Pro</h1>
                 </aside>
                 <!-- VIDEO -->
                 <div class="clear"></div>
 
             </div>
+
             <footer class="bg-green">
                 <section class="content">
                     <h1>Veja alguMais aulas do Curso</h1>
-                    <article>
+
+                    <article >
                         <div class="thumb">
                             <div class="video_play"></div>
                             <img src="resources/assets/img/angularjs.png" alt="Angular JS" title="Framework Angular JS">
@@ -255,19 +257,19 @@ define('BASE', 'http://upinside.test');
 
         <!-- content visual -->
         <div class="container">
-        <div class="content">
-            CURSO HTML PRO
-            <div class="clear"></div>
-        </div>
+            <div class="content">
+                CURSO HTML PRO
+                <div class="clear"></div>
+            </div>
         </div>
 
         <!-- conteudo     -->
         <footer class="container bg-light">
             <section class="main_footer content">
-                <h1 class="fontzero font-bold">Sobre HTML 5 Pro Treinamentos</h1>
+                <h1 class="fontzero ">Sobre HTML 5 Pro Treinamentos</h1>
 
                 <nav class="box box-medium">
-                    <h1 class="title"> Mais sobre HTML5</h1>
+                    <h1 class="title font-bold"> Mais sobre HTML5</h1>
                     <ul>
                         <li>
                             <a class="shorticon shorticon-section" href="#apresentacao" title="Assista o vídeo de apresentação">Assista o Vídeo</a>
@@ -284,7 +286,7 @@ define('BASE', 'http://upinside.test');
 
                 <article class="box box-medium">
                     <h1 class="title font-bold">HTML 5</h1>
-
+                    <ul>
                         <li>
                             <a class="shorticon shorticon-facebook" target="_blank" rel="nofollow" href="http://facebook.com" title="Assista o vídeo de apresentação">Facebook</a>
                         </li>
@@ -292,26 +294,29 @@ define('BASE', 'http://upinside.test');
                             <a class="shorticon shorticon-twitter" target="_blank" rel="nofollow" href="http://twitter.com" title="Assista o vídeo de apresentação">Twitter</a>
                         </li>
                         <li>
-                            <a class="shorticon shorticon-youtube-plus" target="_blank" rel="nofollow" href="http://youtube.com.br" title="Assista o vídeo de apresentação">Youtube</a>
+                            <a class="shorticon shorticon-google-plus" target="_blank" rel="nofollow" href="http://youtube.com.br" title="Assista o vídeo de apresentação">Youtube</a>
                         </li>
+
 
                     </ul>
                 </article>
 
-                <article class="box box-medium last">
+                <article class="main_ead box box-medium last">
                     <h1 class="fontzero">HTML 5 Pro</h1>
 
-                    <p class="shorticon shorticon-config" >
+                    <p class="shorticon shorticon-config">
                         <b>Plataform EAD:</b>
                         <a href="" title="Plataforma EAD HTML 5 Pro">Plataforma EAD HTML 5 Pro</a>
                     </p>
-                    <p class="shorticon shorticon-email" >
+                    <p class="shorticon shorticon-email">
                         <b>E-mail:</b>
                         <a href="mailto:email@email.com" title="Envie um email">email@email.com</a>
                     </p>
                     <hr>
-                    <p>&copy;
-                        <?= date('Y');?> - Web Developer</p>
+                    <p class="plast">
+                        &copy;
+                        <?= date('Y');?> - Web Developer
+                    </p>
                 </article>
 
                 <div class="clear"></div>

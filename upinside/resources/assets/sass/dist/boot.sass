@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400)
+@import https://fonts.googleapis.com/css?family=Lato:100,300,400
 $font-family-base: 'Lato', sans-serif
 $bg-base: '#fbfbfb'
 
@@ -45,8 +45,7 @@ small
     font-size: 0.75em
     color: '#555'
 a
-    text-decoration: none!important
-    &img
+    img
     border: 0
     
 //COLOR PALETE
@@ -137,7 +136,7 @@ a
     text-shadow: 1px 1px 0 #cccccc
 
 .boxshadow
-    box-shadow: 0px 3px 3px 0pxc rgba(0, 0, 0, 0.3)
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3)
 
 .radius
     border-radius: 5px
@@ -145,7 +144,8 @@ a
 .last
     margin-right: 0!important
 
-
+.video-shadow
+    box-shadow: 0px 11px 20px 0 rgba(0, 0, 0, 0.13)
 /*text align*/
 .al-left
     text-align: left
@@ -193,7 +193,7 @@ a
     width: 100%
 
 .box-small
-    width: 22.5%
+    width: 22.75%
     margin-right: 3%
 
 .box-medium
@@ -209,21 +209,22 @@ a
     margin-right: 0
 
 //VIDEO
-.vga
+.video
     width: 100%
     margin: 0
 
-.vga-small
+.video-small
     width: 40%
     margin: 0px 30%
 
-.vga-medium
+.video-medium
     width: 60%
     margin: 0px 20%
 
-.vga-large
+.video-large
     width: 80%
     margin: 0px 10%
+
 
 //BUTTONS
 .btn
