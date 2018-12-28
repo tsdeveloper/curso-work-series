@@ -1,0 +1,27 @@
+{
+  "name": "html5",
+  "description": "curso work series html 5 do jeito certo",
+  "main": "index.php",
+  "authors": [
+    "Build Code Developer <build.code.developer@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "php",
+    "html5",
+    "css",
+    "gulp",
+    "webpack",
+    "yarn",
+    "npm",
+    "sass"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

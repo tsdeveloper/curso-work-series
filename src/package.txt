@@ -10,7 +10,6 @@
   "license": "ISC",
   "devDependencies": {
     "bower": "^1.8.2",
-    "bower-main": "^0.2.14",
     "browser-sync": "^2.23.6",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
@@ -23,13 +22,11 @@
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.0",
     "gulp-sass": "^3.1.0",
-    "main-bower-files": "^2.13.1",
     "path-exists": "^3.0.0",
     "run-sequence": "^2.2.1"
   },
   "dependencies": {
-    "hoek": "^5.0.4",
-    "lodash": "^4.17.10",
+    "hoek": "^5.0.4",  
     "node-mime": "^1.0.0"
   }
 }

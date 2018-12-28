@@ -1,0 +1,25 @@
+{
+  "name": "html5",
+  "version": "1.0.0",
+  "description": "curso work series html 5 do jeito certo",
+  "main": "index.js",
+  "author": "Build Code Developer",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "^1.8.4",
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-error-notifier": "^1.1.0",
+    "gulp-ignore": "^2.0.2",
+    "gulp-inject": "^5.0.2",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.2",
+    "path-exists": "^3.0.0",
+    "run-sequence": "^2.2.1"
+  }
+}
