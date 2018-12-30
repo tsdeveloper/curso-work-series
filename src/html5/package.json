@@ -7,8 +7,8 @@
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.prod.js",
-    "start": "webpack --config webpack.dev.js",
+    "build": "webpack-dev-server --open --config webpack.prod.js",
+    "start": "webpack-dev-server --open --config webpack.dev.js",
     "watch": "webpack --watch"
   },
   "devDependencies": {
@@ -41,5 +41,8 @@
   "browserslist": [
     "last 1 version",
     "> 1%"
-  ]
+  ],
+  "dependencies": {
+    "install": "^0.12.2"
+  }
 }
