@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-define('BASE', 'http://work-series-html5.test:8081');
+define('BASE', 'http://upinside.test');
 ?>
     <html lang="pt-br">
 
@@ -11,9 +11,15 @@ define('BASE', 'http://work-series-html5.test:8081');
 
         <title>Curso Work Series - HTML 5 do Jeito Certo</title>
 
-        <link rel="shortcut icon" href="<?= BASE; ?>/public/img/html5-logo.ico" />
 
+        <!-- inject:css -->
+        <link rel="stylesheet" href="public/assets/css/bootstrap/dist/css/bootstrap-reboot.min.css">
+        <link rel="stylesheet" href="public/assets/css/style.min.css">
+        <link rel="stylesheet" href="public/assets/css/dist/boot/boot.min.css">
+        <!-- <link rel="stylesheet" href="public/assets/css/bootstrap/dist/css/bootstrap.min.css"> -->
+        <!-- endinject -->
 
+        <link rel="shortcut icon" href="resources/assets/img/html5-logo.ico" />
         <!--[if lt IE 9]>
     <script src="./bower_components/html5shiv/dist/html5shiv.min.js"></script>
     <script src="./bower_components/modernizr/modernizr.custom.js"></script>
@@ -24,7 +30,7 @@ define('BASE', 'http://work-series-html5.test:8081');
     <body>
 
 
-    <header class="container bg-gray">
+        <header class="container bg-gray">
             <div class="content">
 
                 <h1 class="main_logo fl-left fontzero">
@@ -33,27 +39,27 @@ define('BASE', 'http://work-series-html5.test:8081');
 
                 <ul class="main_nav fl-right">
                     <li>
-                        <a href="<?= BASE; ?>/htm5-semnatico" title="Html5 semântico">Semântica</a>
+                        <a href="<?=BASE;?>/htm5-semnatico" title="Html5 semântico">Semântica</a>
 
                     </li>
 
                     <li>
-                        <a href="<?= BASE; ?>/estilo-com-oocss" title="Estilo Produtivo com OOCSS">OOCSS</a>
+                        <a href="<?=BASE;?>/estilo-com-oocss" title="Estilo Produtivo com OOCSS">OOCSS</a>
                     </li>
                     <li>
-                        <a href="<?= BASE; ?>/formularios-com-html5" title="Formulários com HTML5">Forms</a>
+                        <a href="<?=BASE;?>/formularios-com-html5" title="Formulários com HTML5">Forms</a>
                     </li>
                     <li>
-                        <a href="<?= BASE; ?>/audio-e-video" title="Áudio e Vídeo na Web">Mídia</a>
+                        <a href="<?=BASE;?>/audio-e-video" title="Áudio e Vídeo na Web">Mídia</a>
                     </li>
                     <li>
-                        <a href="<?= BASE; ?>/gelocation-e-storage" title="Geolocation e HTML Storage">API's</a>
+                        <a href="<?=BASE;?>/gelocation-e-storage" title="Geolocation e HTML Storage">API's</a>
                     </li>
                     <li>
-                        <a href="<?= BASE; ?>/micro-dados" title="Distribuição com Micro Dados">Micro Dados</a>
+                        <a href="<?=BASE;?>/micro-dados" title="Distribuição com Micro Dados">Micro Dados</a>
                     </li>
                     <li>
-                        <a href="<?= BASE; ?>/sobre-curso" class="btn btn-green radius boxshadow" title="Sobre o Curso">Curso</a>
+                        <a href="<?=BASE;?>/sobre-curso" class="btn btn-green radius boxshadow" title="Sobre o Curso">Curso</a>
                     </li>
 
                 </ul>
@@ -78,7 +84,7 @@ define('BASE', 'http://work-series-html5.test:8081');
                 </header>
 
                 <!-- VIDEO -->
-                <video class="video video-large main_video video-shadow" src="<?= BASE; ?>/public/midias/apresentacao.mp4" width="400" controls></video>
+                <video class="video video-large main_video video-shadow" src="resources/assets/midias/apresentacao.mp4" width="400" controls></video>
                 <aside class="al-center">
                     <h1>
                         <a href="#" class="btn btn-blue radius" title="Buy HTML 5 Pro" target="_blank"> Buy</a> HTML 5 Pro</h1>
@@ -95,7 +101,7 @@ define('BASE', 'http://work-series-html5.test:8081');
                     <article >
                         <div class="thumb">
                             <div class="video_play"></div>
-                            <img class="angular" alt="Angular JS" title="Framework Angular JS">
+                            <img src="resources/assets/img/angularjs.png" alt="Angular JS" title="Framework Angular JS">
 
                         </div>
                         <h1>Angular JS</h1>
@@ -104,7 +110,7 @@ define('BASE', 'http://work-series-html5.test:8081');
                     <article>
                         <div class="thumb">
                             <div class="video_play"></div>
-                            <img class="node"  alt="Node JS" title="Framework Node JS">
+                            <img src="resources/assets/img/nodejs.png" alt="Node JS" title="Framework Node JS">
 
                         </div>
                         <h1>Node JS</h1>
@@ -114,7 +120,7 @@ define('BASE', 'http://work-series-html5.test:8081');
                     <article>
                         <div class="thumb">
                             <div class="video_play"></div>
-                            <img class="sass"  alt="Sass JS" title="Framework Sass JS">
+                            <img src="resources/assets/img/sass-logo.png" alt="Sass JS" title="Framework Sass JS">
 
                         </div>
                         <h1>SASS CSS</h1>
@@ -124,7 +130,7 @@ define('BASE', 'http://work-series-html5.test:8081');
                     <article>
                         <div class="thumb">
                             <div class="video_play"></div>
-                            <img class="bower" alt="Bower JS" title="Framework Bower JS">
+                            <img src="resources/assets/img/bower-logo.png" alt="Bower JS" title="Framework Bower JS">
 
                         </div>
                         <h1>Bower JS</h1>
@@ -150,42 +156,42 @@ define('BASE', 'http://work-series-html5.test:8081');
 
                 <div class="content">
                     <article>
-                        <img class="angular"  alt="Angular JS" title="Framework Angular JS">
+                        <img src="resources/assets/img/angularjs.png" alt="Angular JS" title="Framework Angular JS">
                         <h1>Angular JS</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
                     <article>
-                        <img class="bower" alt="Bower JS" title="Framework Bower JS">
+                        <img src="resources/assets/img/bower-logo.png" alt="Bower JS" title="Framework Bower JS">
                         <h1>Bower JS</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
                     <article>
-                        <img class="sass" alt="Sass JS" title="Framework Sass JS">
+                        <img src="resources/assets/img/sass-logo.png" alt="Sass JS" title="Framework Sass JS">
                         <h1>Sass CSS</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
                     <article>
-                        <img class="knockout" alt="Knockout JS" title="Framework Knockout JS">
+                        <img src="resources/assets/img/knockoutjs.png" alt="Knockout JS" title="Framework Knockout JS">
                         <h1>Knockout JS</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
                     <article>
-                        <img class="node" alt="Node JS" title="Framework Node JS">
+                        <img src="resources/assets/img/nodejs.png" alt="Node JS" title="Framework Node JS">
                         <h1>Node JS</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
                     <article>
-                        <img class="webpack" alt="WebPack JS" title="Framework WebPack JS">
+                        <img src="resources/assets/img/webpack-javascript-logo.png" alt="WebPack JS" title="Framework WebPack JS">
                         <h1>WebPack</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
                     <article>
-                        <img class="vue" alt="Vue JS" title="Framework Vue JS">
+                        <img src="resources/assets/img/vuejs.png" alt="Vue JS" title="Framework Vue JS">
                         <h1>Vue JS</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
@@ -309,7 +315,7 @@ define('BASE', 'http://work-series-html5.test:8081');
                     <hr>
                     <p class="plast">
                         &copy;
-                        <?= date('Y'); ?> - Web Developer
+                        <?= date('Y');?> - Web Developer
                     </p>
                 </article>
 
@@ -319,8 +325,20 @@ define('BASE', 'http://work-series-html5.test:8081');
 
         </footer>
 
+        <!-- inject:js -->
+        <script src="public/assets/js/Modernizr/modernizr.custom.js"></script>
+        <script src="public/assets/js/html5shiv/dist/html5shiv.min.js"></script>
+        <script src="public/assets/js/jquery/dist/jquery.min.js"></script>
+        <script src="public/assets/js/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- endinject -->
+
+        <script>
+            $(function () {
 
 
+
+            })
+        </script>
     </body>
 
     </html>
