@@ -12,7 +12,8 @@ module.exports = {
         path: path.resolve(__dirname, 'public')
     },
     module: {
-        rules: [{
+        rules: [
+            {
                 test: /\.s?[ac]ss$/,
                 use: [
                     process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
