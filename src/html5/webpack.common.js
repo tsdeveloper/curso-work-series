@@ -14,7 +14,7 @@ module.exports = {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'public')
     },
-    // devtool: 'source-map',
+    devtool: 'inline-source-map',
     module: {
         rules: [
 
@@ -32,19 +32,19 @@ module.exports = {
                     use: [{
                             loader: 'css-loader',
                             options: {
-                                sourceMap: false
+                                // sourceMap: true
                             }
                         },
                         {
                             loader: 'postcss-loader',
                             options: {
-                                sourceMap: false
+                                // sourceMap: true
                             }
                         },
                         {
                             loader: 'sass-loader',
                             options: {
-                                sourceMap: false
+                                // sourceMap: true
                             }
                         }
                     ]
