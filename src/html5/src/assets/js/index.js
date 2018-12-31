@@ -1,4 +1,4 @@
-import '../sass/dist/boot.sass';
+import '../sass/main.sass';
 
 import {
     hello,

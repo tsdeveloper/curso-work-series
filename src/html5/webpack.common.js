@@ -19,115 +19,62 @@ module.exports = {
         rules: [
 
             {
-                test: /\.css$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: ['css-loader', 'postcss-loader']
-                })
+                test: /\.js$/,
+                use: {
+                    loader: 'babel-loader'
+                },
+                exclude: /node_modules/,
+                include: path.join(__dirname, 'src')
             },
             {
-                test: /\.s?[ac]ss$/,
+                test: /\.css$/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: [{
                             loader: 'css-loader',
                             options: {
-                                sourceMap: false
+                                url: true,
+                                sourceMap: true
                             }
                         },
                         {
                             loader: 'postcss-loader',
                             options: {
-                                sourceMap: false
+                                sourceMap: true
+                            }
+                        },
+                    ]
+                })
+
+            },
+            {
+                test: /\.sass$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: [{
+                            loader: 'css-loader',
+                            options: {
+                                url: true,
+                                sourceMap: true
+                            }
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                sourceMap: true
                             }
                         },
                         {
                             loader: 'sass-loader',
                             options: {
-                                sourceMap: false
+                                url: true,
+                                sourceMap: true
                             }
                         }
                     ]
                 })
-            },
-            // {
-            //     test: /\.css$/,
-            //     use: [
-            //         process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
-            //         {
-            //             loader: 'style-loader',
-            //             options: {
-            //                 sourceMap: true
-            //             }
-            //         },
-            //         {
-            //             loader: 'css-loader',
-            //             options: {
-            //                 url: true,
-            //                 sourceMap: true
-            //             }
-            //         },
-            //         {
-            //             loader: 'postcss-loader',
-            //             options: {
-            //                 sourceMap: true
-            //             }
-            //         },
-            //     ]
-            // },
-            // {
-            //     test: /\.s?[ac]ss$/,
-            //     use: [
-            //         process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
-            //         {
-            //             loader: 'style-loader',
-            //             options: {
-            //                 sourceMap: true
-            //             }
-            //         },
-            //         {
-            //             loader: 'css-loader',
-            //             options: {
-            //                 url: true,
-            //                 sourceMap: true
-            //             }
-            //         },
-            //         {
-            //             loader: 'postcss-loader',
-            //             options: {
-            //                 sourceMap: true
-            //             }
-            //         },
-            //         {
-            //             loader: 'sass-loader',
-            //             options: {
-            //                 url: true,
-            //                 sourceMap: true
-            //             }
-            //         }
-            //     ],
-            // },
 
-            // {
-            //     test: /\.sass$/,
-            //     use: ExtractTextPlugin.extract({
-            //         fallback: 'style-loader',
-            //         use: ['css-loader', 'postcss-loader', 'sass-loader']
-            //     })
-
-            // },
-            {
-                test: /\.(jpe?g|png|gif|svg|mp4)$/i,
-                use: [{
-                    loader: 'file-loader',
-                    options: {},
-                }, ]
             },
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'babel-loader'
-            }
 
         ]
     },
