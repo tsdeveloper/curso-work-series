@@ -1,6 +1,6 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -27,34 +27,74 @@ module.exports = {
                 include: path.join(__dirname, 'src')
             },
             {
-                test: /\.(sa|sc|c)ss$/,
-                use: [
-                    devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    'postcss-loader',
-                    'sass-loader',
-                ],
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: [{
+                            loader: 'css-loader',
+                            options: {
+                                url: true,
+                                sourceMap: true
+                            }
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                sourceMap: true
+                            }
+                        },
+                    ]
+                })
+
+            },
+            {
+                test: /\.sass$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: [{
+                            loader: 'css-loader',
+                            options: {
+                                url: true,
+                                sourceMap: true
+                            }
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                sourceMap: true
+                            }
+                        },
+                        {
+                            loader: 'sass-loader',
+                            options: {
+                                url: true,
+                                sourceMap: true
+                            }
+                        }
+                    ]
+                })
+
             },
             // Copy static assets over with file-loader
             {
                 test: /\.(ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
                 loader: 'file-loader',
                 options: {
-                   
+                    name: '[name].[ext]'
                 },
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
                 loader: 'file-loader',
                 options: {
-
+                    name: 'fonts/[name].[ext]'
                 },
             },
             {
                 test: /\.(jpg|gif|png|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
                 loader: 'file-loader',
                 options: {
-
+                    name: 'images/[name].[ext]'
                 },
             },
 
@@ -86,12 +126,7 @@ module.exports = {
         //     chunkFilename: '[id].css'
         // }),
 
-        new MiniCssExtractPlugin({
-            // Options similar to the same options in webpackOptions.output
-            // both options are optional
-            filename: devMode ? '[name].css' : '[name].[hash].css',
-            chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
-        }),
+        new ExtractTextPlugin("styles.css"),
 
         new CopyWebpackPlugin([{
             from: path.resolve(__dirname, 'src/assets/img'),

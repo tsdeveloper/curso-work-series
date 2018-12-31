@@ -11,7 +11,7 @@ define('BASE', 'http://work-series-html5.test:8081');
 
         <title>Curso Work Series - HTML 5 do Jeito Certo</title>
 
-        <link rel="shortcut icon" href="<?= BASE; ?>/public/img/html5-logo.ico" />
+        <link rel="shortcut icon" href="<?= BASE; ?>/img/html5-logo.ico" />
 
 
         <!--[if lt IE 9]>
@@ -78,7 +78,7 @@ define('BASE', 'http://work-series-html5.test:8081');
                 </header>
 
                 <!-- VIDEO -->
-                <video class="video video-large main_video video-shadow" src="<?= BASE; ?>/public/midias/apresentacao.mp4" width="400" controls></video>
+                <video class="video video-large main_video video-shadow" src="<?= BASE; ?>/midias/apresentacao.mp4" width="400" controls></video>
                 <aside class="al-center">
                     <h1>
                         <a href="#" class="btn btn-blue radius" title="Buy HTML 5 Pro" target="_blank"> Buy</a> HTML 5 Pro</h1>
