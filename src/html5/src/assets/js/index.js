@@ -1,4 +1,5 @@
 import '../sass/dist/boot.sass';
+import '../sass/multitenant/style.tenant.sass';
 
 import {
     hello,

@@ -11,7 +11,10 @@ const devMode = process.env.NODE_ENV !== 'production'
 
 
 module.exports = {
-    entry: './src/assets/js/index.js',
+    entry: {
+        app: './src/assets/js/index.js',
+        about: './src/assets/js/about.js',
+    },
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'public')
