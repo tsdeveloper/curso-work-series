@@ -40,7 +40,7 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            name: '[path][name]-[hash].[ext]',
+            name: '[name]-[hash].[ext]',
             outputPath: 'img/',
             publicPath: '/dist',
           },
@@ -52,21 +52,23 @@ module.exports = {
       //   loader: 'url-loader?limit=30000&name=img/[name].[ext]'
       // }, // inline base64 URLs for <=30k images, direct URLs for the rest
       {
-        test: /\.(ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]',
-          outputPath: 'icons/',
-          publicPath: './. ',
+        test: /\.(ico)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name]-[hash].[ext]',
+            outputPath: 'icons/',
+            publicPath: '/dist',
+          },
         },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]',
+          name: '[name]-[hash].[ext]',
           outputPath: 'fonts/',
-          publicPath: './. ',
+          publicPath: '/dist',
         },
       },
     ],
@@ -91,12 +93,12 @@ module.exports = {
     }),
     new copyWebpackPlugin([{
       from: path.resolve(__dirname, 'src/img'),
-      to: path.resolve(__dirname, 'dist/img'),
+      to: path.resolve(__dirname, 'dist/media/img'),
       ignore: []
     }]),
     new copyWebpackPlugin([{
       from: path.resolve(__dirname, 'src/midias'),
-      to: path.resolve(__dirname, 'dist/midias')
+      to: path.resolve(__dirname, 'dist/midias/video')
     }]),
     new copyWebpackPlugin([{
       from: path.resolve(__dirname, 'src/icons'),
