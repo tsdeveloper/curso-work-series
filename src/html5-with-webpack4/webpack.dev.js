@@ -3,6 +3,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const merge = require('webpack-merge');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const WriteFilePlugin = require('write-file-webpack-plugin');
+const path = require('path');
 const common = require('./webpack.common');
 
 module.exports = merge(common, {
@@ -18,57 +19,41 @@ module.exports = merge(common, {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: [{
-              loader: 'css-loader',
-              options: {
-                minimize: false,
-              },
-            },
-            {
-              loader: 'postcss-loader',
-              options: {
-                minimize: false,
-              },
-            },
-          ],
-        }),
+          use: ['css-loader', 'postcss-loader']
+        })
       },
       {
-        test: /\.s[ac]ss$/,
+        test: /\.s?[ac]ss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [{
               loader: 'css-loader',
               options: {
-                sourceMap: true,
-                // url: false // Use this option if you don't want webpack to resolve URL paths
-              },
-            },
-            {
-              loader: 'resolve-url-loader',
-              options: {}
+                sourceMap: false
+              }
             },
             {
               loader: 'postcss-loader',
               options: {
-                sourceMap: true
+                sourceMap: false
               }
             },
-
             {
               loader: 'sass-loader',
               options: {
-                sourceMap: true,
-                sourceMapContents: false
+                sourceMap: false
               }
-            },
-            {
-              loader: 'import-glob-loader'
-            },
-          ],
-        }),
+            }
+          ]
+        })
       },
     ],
+  },
+  resolve: {
+    alias: {
+      // 'assets': path.resolve('src/img')
+      'img': path.resolve('src/img/')
+    },
   },
   plugins: [
     // https://www.npmjs.com/package/webpack-notifier
