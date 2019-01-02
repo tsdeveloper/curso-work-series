@@ -6,20 +6,24 @@ define('BASE', 'http://work-series-html5.test:8081');
 
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
         <title>Curso Work Series - HTML 5 do Jeito Certo</title>
 
-        <link rel="shortcut icon" href="<?= BASE; ?>/img/html5-logo.ico" />
-
+        <link rel="shortcut icon" href="<?= BASE; ?>/img/html5-logo.ico">
+ <!-- start:css -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- end:css -->
+  <!-- start:bundle-time -->
+  <!-- end:bundle-time -->
 
         <!--[if lt IE 9]>
     <script src="./bower_components/html5shiv/dist/html5shiv.min.js"></script>
     <script src="./bower_components/modernizr/modernizr.custom.js"></script>
     <![endif]-->
 
-    <link href="styles.css" rel="stylesheet"></head>
+    <link href="styles.css?64bf76dce59b1dbb3256" rel="stylesheet"></head>
 
     <body>
 
@@ -28,7 +32,7 @@ define('BASE', 'http://work-series-html5.test:8081');
             <div class="content">
 
                 <h1 class="main_logo fl-left fontzero">
-                    <a class='radius' title="home" href="">Curso Work Series - HTML 5 do Jeito Certo</a>
+                    <a class="radius" title="home" href="">Curso Work Series - HTML 5 do Jeito Certo</a>
                 </h1>
 
                 <ul class="main_nav fl-right">
@@ -90,9 +94,9 @@ define('BASE', 'http://work-series-html5.test:8081');
 
             <footer class="bg-green">
                 <section class="content">
-                    <h1>Veja alguMais aulas do Curso</h1>
+                    <h1>Veja algumas aulas do Curso</h1>
 
-                    <article >
+                    <article>
                         <div class="thumb">
                             <div class="video_play"></div>
                             <img class="angular" alt="Angular JS" title="Framework Angular JS">
@@ -104,7 +108,7 @@ define('BASE', 'http://work-series-html5.test:8081');
                     <article>
                         <div class="thumb">
                             <div class="video_play"></div>
-                            <img class="node"  alt="Node JS" title="Framework Node JS">
+                            <img class="node" alt="Node JS" title="Framework Node JS">
 
                         </div>
                         <h1>Node JS</h1>
@@ -114,7 +118,7 @@ define('BASE', 'http://work-series-html5.test:8081');
                     <article>
                         <div class="thumb">
                             <div class="video_play"></div>
-                            <img class="sass"  alt="Sass JS" title="Framework Sass JS">
+                            <img class="sass" alt="Sass JS" title="Framework Sass JS">
 
                         </div>
                         <h1>SASS CSS</h1>
@@ -150,10 +154,11 @@ define('BASE', 'http://work-series-html5.test:8081');
 
                 <div class="content">
                     <article>
-                        <img class="angular"  alt="Angular JS" title="Framework Angular JS">
+                        <img class="angular" alt="Angular JS" title="Framework Angular JS">
                         <h1>Angular JS</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
+
                     <article>
                         <img class="bower" alt="Bower JS" title="Framework Bower JS">
                         <h1>Bower JS</h1>
@@ -234,15 +239,19 @@ define('BASE', 'http://work-series-html5.test:8081');
         <article class="container bg-orange">
             <div class="content">
                 <header>
+                    <hgroup>
                     <h1>Faça parte da turma de HTML 5 Pro</h1>
                     <h2>Começe agora mesmo. O Curo é de
                         <mark>HTML Pro EAD</mark>
                     </h2>
+                    </hgroup>
+
                 </header>
 
                 <a href="#" title="Curso Work Series - HTML 5 do Jeito Certo" target="_blank">Curso Work Series - HTML 5 do Jeito Certo</a>
-                <footer></footer>
-                <div>Estudo garantido EAD</div>
+
+                <footer>
+                    <div>Estudo garantido EAD</div>
                 </footer>
 
                 <div class="clear"></div>
@@ -260,7 +269,7 @@ define('BASE', 'http://work-series-html5.test:8081');
         <!-- conteudo     -->
         <footer class="container bg-light">
             <section class="main_footer content">
-                <h1 class="fontzero ">Sobre HTML 5 Pro Treinamentos</h1>
+                <h1 class="fontzero">Sobre HTML 5 Pro Treinamentos</h1>
 
                 <nav class="box box-medium">
                     <h1 class="title font-bold"> Mais sobre HTML5</h1>
@@ -320,7 +329,6 @@ define('BASE', 'http://work-series-html5.test:8081');
         </footer>
 
 
-
-    <script type="text/javascript" src="app.016bc0db360faca9f5e3.js"></script></body>
+    <script src="vendor/jquery/dist/jquery.min.js"></script><script src="app.b6a3846c561858396ba3.js?64bf76dce59b1dbb3256"></script></body>
 
     </html>

@@ -6,8 +6,7 @@ const common = require('./webpack.common');
 module.exports = merge(common, {
   mode: 'production',
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
@@ -15,14 +14,21 @@ module.exports = merge(common, {
         }),
       },
       {
-        test: /\.scss$/,
+        test: /\.s[ac]ss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: [
-            { loader: 'css-loader' },
-            { loader: 'postcss-loader' },
-            { loader: 'sass-loader' },
-            { loader: 'import-glob-loader' },
+          use: [{
+              loader: 'css-loader'
+            },
+            {
+              loader: 'postcss-loader'
+            },
+            {
+              loader: 'sass-loader'
+            },
+            {
+              loader: 'import-glob-loader'
+            },
           ],
         }),
       },

@@ -4,7 +4,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const babelPluginSyntaxDynamicImport = require('@babel/plugin-syntax-dynamic-import');
+const Webpack = require('webpack');
+const WebpackNotifier = require('webpack-notifier');
+const InjectHtmlWebpackPlugin = require('inject-html-webpack-plugin');
+const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production'
 
@@ -12,17 +15,41 @@ const devMode = process.env.NODE_ENV !== 'production'
 module.exports = {
   entry: {
     app: './src/js/index.js',
-    // about: './src/js/about.js',
+    about: './src/js/about.js',
+
   },
+  externals: {
+    jquery: 'jQuery',
+  },
+
   output: {
     filename: '[name].[chunkhash].js',
     path: path.resolve(__dirname, 'dist')
   },
   // devtool: 'source-map',
   module: {
+
     rules: [
 
+      {
+        test: /[\/\\]node_modules[\/\\]some-module[\/\\]index\.js$/,
+        loader: "imports?this=>window"
+      },
+      {
+        test: /[\/\\]node_modules[\/\\]some-module[\/\\]index\.js$/,
+        loader: "imports?define=>false"
+      },
 
+      {
+        test: /\.tpl$/,
+        loader: 'ejs-loader',
+        query: {
+          interpolate: /\{\{(.+)\}\}/g,
+          escape: '<$-(.+?)$>',
+          evaluate: /\[\[(.+)\]\]/g,
+          engine: 'lodash',
+        },
+      },
       // {
       //     test: /\.css$/,
       //     use: [
@@ -96,6 +123,7 @@ module.exports = {
       //         options: {},
       //     }, ]
       // },
+
       // Copy static assets over with file-loader
       {
         test: /\.(ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -123,6 +151,18 @@ module.exports = {
           },
         }
       },
+      // {
+      //   test: require.resolve('jquery'),
+      //   use: [{
+      //       loader: 'expose-loader',
+      //       query: 'jQuery',
+      //     },
+      //     {
+      //       loader: 'expose-loader',
+      //       query: '$',
+      //     },
+      //   ]
+      // },
 
       {
         test: /\.js$/,
@@ -146,25 +186,92 @@ module.exports = {
     alias: {
       'img': path.resolve('src/img/')
     },
+    extensions: ['.js'],
+    // alias: {
+    //   'jquery': 'jquery/dist/jquery.js',
+    // },
   },
   plugins: [
+    // https://www.npmjs.com/package/webpack-notifier
+    new WebpackNotifier(),
     new CleanWebpackPlugin([path.resolve(__dirname, 'dist')]),
+    new Webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      jquery: 'jquery',
+      "window.jQuery": "jquery"
+    }),
+    // // code splitting order chunks:
+    // new CommonsChunkPlugin({ name: 'commons' }), // 0, split commons from all entries
+    // new CommonsChunkPlugin({ name: 'polyfills', chunks: ['polyfills', 'vendors',], }), // 1
+    // new CommonsChunkPlugin({ name: 'vendors', chunks: ['vendors', 'app',], }), // 2
+    // // html
+    // new HtmlWebpackPlugin({
+    //   chunks: [
+    //     'commons', // 0
+    //     'polyfills', // 1
+    //     'vendors', // 2
+    //     'app', // rest
+    //   ],
+    //   ...
+    // }),
+      // new InjectHtmlWebpackPlugin({
+    //   filename: './src/index.php',
+    //   chunks: ['app', ],
+    //   // processor: "http://cdn.example.com",
+    //   custom: [{
+    //     startjs: '<!-- start:js -->',
+    //     endjs: '<!-- end:js -->',
+    //     // content: Date.now()
+    //   }]
+    // }),
 
     new HtmlWebpackPlugin({
       // hash: true,
       // title: 'My Awesome application',
       // myPageHeader: 'Hello World',
       template: './src/index.php',
-      filename: './index.php' //relative to root of the application
+      filename: './index.php', //relative to root of the application
+      hash: true,
+      inject: true,
+      chunks: ['app'],
+      minify: {
+        removeScriptTypeAttributes: true,
+      },
     }),
+    new HtmlWebpackExternalsPlugin({
+      externals: [{
+        module: 'jquery',
+        entry: 'dist/jquery.min.js',
+        global: 'jQuery',
+      }, ],
+    }),
+
+    // new HtmlWebpackExternalsPlugin({
+    //   externals: [{
+    //     module: 'jquery',
+    //     entry: {
+    //       path: 'https://code.jquery.com/jquery-3.2.1.js',
+    //       attributes: {
+    //         integrity: 'sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=',
+    //         crossorigin: 'anonymous',
+    //       },
+    //     },
+    //     global: 'jQuery',
+    //   }, ],
+    // }),
     // new MiniCssExtractPlugin({
     //     // Options similar to the same options in webpackOptions.output
     //     // both options are optional
     //     filename: '[name].css',
     //     chunkFilename: '[id].css'
     // }),@babelPluginSyntaxDynamicImport
-    
+
     new ExtractTextPlugin("styles.css"),
+    // Set jQuery in global scope
+    // https://webpack.js.org/plugins/provide-plugin/
+
+
 
     // new CopyWebpackPlugin([{
     //   from: path.resolve(__dirname, 'src/img'),
@@ -176,5 +283,6 @@ module.exports = {
     //   to: path.resolve(__dirname, 'dist/midias/video')
     // }]),
   ],
+
 
 };

@@ -4,6 +4,8 @@ const merge = require('webpack-merge');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const WriteFilePlugin = require('write-file-webpack-plugin');
 const path = require('path');
+const Webpack = require('webpack');
+const InjectHtmlWebpackPlugin = require('inject-html-webpack-plugin');
 const common = require('./webpack.common');
 
 module.exports = merge(common, {
@@ -23,9 +25,18 @@ module.exports = merge(common, {
       "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
     }
   },
+  externals: {
+    jquery: 'jQuery',
+  },
   module: {
-    rules: [
-
+    rules: [{
+        test: /[\/\\]node_modules[\/\\]some-module[\/\\]index\.js$/,
+        loader: "imports?this=>window"
+      },
+      {
+        test: /[\/\\]node_modules[\/\\]some-module[\/\\]index\.js$/,
+        loader: "imports?define=>false"
+      },
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
@@ -71,24 +82,58 @@ module.exports = merge(common, {
   // },
 
   plugins: [
+    new Webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      "window.jQuery": "jquery"
+    }),
     // https://www.npmjs.com/package/webpack-notifier
     new WebpackNotifierPlugin(),
     // https://github.com/gajus/write-file-webpack-plugin
     new WriteFilePlugin({
       useHashIndex: true,
     }),
+
+
     // https: //github.com/Va1/browser-sync-webpack-plugin
-    // new BrowserSyncPlugin(
-    //   // BrowserSync options
-    //   {
-    //     host: 'localhost',
-    //     port: 3000,
-    //     proxy: 'work-series-html5.test:8081/',
-    //   }, {
-    //     reload: false,
-    //   },
-    // ),
+    new BrowserSyncPlugin(
+      // BrowserSync options
+      {
+        host: 'localhost',
+        port: 3000,
+        proxy: 'work-series-html5.test:8081/',
+        browser: "chrome",
+      }, {
+        reload: false,
+      },
+    ),
   ],
+  // optimization: {
+  //   splitChunks: {
+  //     chunks: 'all',
+  //   },
+  // },
+  // optimization: {
+  //   runtimeChunk: 'single',
+  //   splitChunks: {
+  //     chunks: 'all',
+  //     maxInitialRequests: Infinity,
+  //     minSize: 0,
+  //     cacheGroups: {
+  //       vendor: {
+  //         test: /[\\/]node_modules[\\/]/,
+  //         name(module) {
+  //           // get the name. E.g. node_modules/packageName/not/this/part.js
+  //           // or node_modules/packageName
+  //           const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
+
+  //           // npm package names are URL-safe, but some servers don't like @ symbols
+  //           return `npm.${packageName.replace('@', '')}`;
+  //         },
+  //       },
+  //     },
+  //   },
+  // },
 
   // optimization: {
   //   // Deixaremos false por enquanto para propósitos de demonstração

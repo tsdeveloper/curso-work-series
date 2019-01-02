@@ -12,7 +12,11 @@ define('BASE', 'http://work-series-html5.test:8081');
         <title>Curso Work Series - HTML 5 do Jeito Certo</title>
 
         <link rel="shortcut icon" href="<?= BASE; ?>/img/html5-logo.ico" />
-
+ <!-- start:css -->
+  <link rel="stylesheet" href="styles.css"/>
+  <!-- end:css -->
+  <!-- start:bundle-time -->
+  <!-- end:bundle-time -->
 
         <!--[if lt IE 9]>
     <script src="./bower_components/html5shiv/dist/html5shiv.min.js"></script>
@@ -90,7 +94,7 @@ define('BASE', 'http://work-series-html5.test:8081');
 
             <footer class="bg-green">
                 <section class="content">
-                    <h1>Veja alguMais aulas do Curso</h1>
+                    <h1>Veja algumas aulas do Curso</h1>
 
                     <article >
                         <div class="thumb">
@@ -154,6 +158,7 @@ define('BASE', 'http://work-series-html5.test:8081');
                         <h1>Angular JS</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
+
                     <article>
                         <img class="bower" alt="Bower JS" title="Framework Bower JS">
                         <h1>Bower JS</h1>
@@ -234,15 +239,19 @@ define('BASE', 'http://work-series-html5.test:8081');
         <article class="container bg-orange">
             <div class="content">
                 <header>
+                    <hgroup>
                     <h1>Faça parte da turma de HTML 5 Pro</h1>
                     <h2>Começe agora mesmo. O Curo é de
                         <mark>HTML Pro EAD</mark>
                     </h2>
+                    </hgroup>
+
                 </header>
 
                 <a href="#" title="Curso Work Series - HTML 5 do Jeito Certo" target="_blank">Curso Work Series - HTML 5 do Jeito Certo</a>
-                <footer></footer>
-                <div>Estudo garantido EAD</div>
+
+                <footer>
+                    <div>Estudo garantido EAD</div>
                 </footer>
 
                 <div class="clear"></div>
@@ -318,7 +327,6 @@ define('BASE', 'http://work-series-html5.test:8081');
             </section>
 
         </footer>
-
 
 
     </body>
