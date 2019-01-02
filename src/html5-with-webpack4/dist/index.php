@@ -321,6 +321,6 @@ define('BASE', 'http://work-series-html5.test:8081');
 
 
 
-    <script type="text/javascript" src="main.bundle.js"></script></body>
+    <script type="text/javascript" src="app.016bc0db360faca9f5e3.js"></script></body>
 
     </html>

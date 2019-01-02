@@ -4,14 +4,18 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const babelPluginSyntaxDynamicImport = require('@babel/plugin-syntax-dynamic-import');
 
 const devMode = process.env.NODE_ENV !== 'production'
 
 
 module.exports = {
-  entry: './src/js/index.js',
+  entry: {
+    app: './src/js/index.js',
+    // about: './src/js/about.js',
+  },
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].[chunkhash].js',
     path: path.resolve(__dirname, 'dist')
   },
   // devtool: 'source-map',
@@ -158,19 +162,19 @@ module.exports = {
     //     // both options are optional
     //     filename: '[name].css',
     //     chunkFilename: '[id].css'
-    // }),
-
+    // }),@babelPluginSyntaxDynamicImport
+    
     new ExtractTextPlugin("styles.css"),
 
-    new CopyWebpackPlugin([{
-      from: path.resolve(__dirname, 'src/img'),
-      to: path.resolve(__dirname, 'dist/img'),
-      ignore: []
-    }]),
-    new CopyWebpackPlugin([{
-      from: path.resolve(__dirname, 'src/midias'),
-      to: path.resolve(__dirname, 'dist/midias/video')
-    }]),
+    // new CopyWebpackPlugin([{
+    //   from: path.resolve(__dirname, 'src/img'),
+    //   to: path.resolve(__dirname, 'dist/img'),
+    //   ignore: []
+    // }]),
+    // new CopyWebpackPlugin([{
+    //   from: path.resolve(__dirname, 'src/midias'),
+    //   to: path.resolve(__dirname, 'dist/midias/video')
+    // }]),
   ],
 
 };
