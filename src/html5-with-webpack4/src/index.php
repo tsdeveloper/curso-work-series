@@ -27,7 +27,6 @@ define('BASE', 'http://work-series-html5.test:8081');
 
     <body>
 
-
     <header class="container bg-gray">
             <div class="content">
 
