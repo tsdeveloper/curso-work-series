@@ -23,38 +23,41 @@ module.exports = merge(common, {
         })
       },
       {
-        test: /\.s?[ac]ss$/,
+        test: /\.s[ac]ss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [{
               loader: 'css-loader',
               options: {
-                sourceMap: false
+                sourceMap: true,
+                url: true,
               }
             },
             {
               loader: 'postcss-loader',
               options: {
-                sourceMap: false
+                sourceMap: true
               }
             },
             {
               loader: 'sass-loader',
               options: {
-                sourceMap: false
+                sourceMap: true,
+                url: true,
               }
-            }
+            },
+
           ]
         })
       },
     ],
   },
-  resolve: {
-    alias: {
-      // 'assets': path.resolve('src/img')
-      'img': path.resolve('src/img/')
-    },
-  },
+  // resolve: {
+  //   alias: {
+  //     // 'assets': path.resolve('src/img')
+  //     'img': path.resolve('src/img/')
+  //   },
+  // },
   plugins: [
     // https://www.npmjs.com/package/webpack-notifier
     new WebpackNotifierPlugin(),

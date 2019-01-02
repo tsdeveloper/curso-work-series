@@ -111,9 +111,15 @@ module.exports = {
         test: /\.(jpg|gif|png|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: 'file-loader',
         options: {
-          name: 'img/[name].[ext]'
-        },
+          name(file) {
+            if (process.env.NODE_ENV === 'development') {
+              return 'img/[name].[ext]';
+            }
+            return '[hash].[ext]';
+          },
+        }
       },
+
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -156,15 +162,15 @@ module.exports = {
 
     new ExtractTextPlugin("styles.css"),
 
-    // new CopyWebpackPlugin([{
-    //   from: path.resolve(__dirname, 'src/img'),
-    //   to: path.resolve(__dirname, 'dist/img'),
-    //   ignore: []
-    // }]),
-    // new CopyWebpackPlugin([{
-    //   from: path.resolve(__dirname, 'src/assets/midias'),
-    //   to: path.resolve(__dirname, 'public/midias')
-    // }]),
+    new CopyWebpackPlugin([{
+      from: path.resolve(__dirname, 'src/img'),
+      to: path.resolve(__dirname, 'dist/img'),
+      ignore: []
+    }]),
+    new CopyWebpackPlugin([{
+      from: path.resolve(__dirname, 'src/midias'),
+      to: path.resolve(__dirname, 'dist/midias/video')
+    }]),
   ],
 
 };
