@@ -3,6 +3,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
 const copyWebpackPlugin = require('copy-webpack-plugin');
+const htmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -11,23 +12,45 @@ module.exports = {
   externals: {
     jquery: 'jQuery',
   },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.scss', '.sass']
+  },
   module: {
     rules: [{
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
       },
+      // {
+      //   test: /\.(jpg|gif|png|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      //   use: [{
+      //     loader: 'file-loader',
+      //     options: {
+      //       name: '[name].[ext]',
+      //       outputPath: 'img/',
+      //       publicPath: './. ',
+      //     },
+      //   }, ],
+      // },
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: [{
-          loader: require.resolve("file-loader"),
+        test: /\.(png|jpg|gif|svg)$/,
+        exclude: [
+          path.resolve(__dirname, './node_modules'),
+        ],
+        use: {
+          loader: 'file-loader',
           options: {
-            name: '[name].[ext]',
+            name: '[path][name]-[hash].[ext]',
             outputPath: 'img/',
-            publicPath: './. ',
+            publicPath: '/dist',
           },
-        }, ],
+        },
       },
+      // {
+      //   test: /\.(png|jpg|svg)$/,
+      //   include: path.join(__dirname, 'img'),
+      //   loader: 'url-loader?limit=30000&name=img/[name].[ext]'
+      // }, // inline base64 URLs for <=30k images, direct URLs for the rest
       {
         test: /\.(ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: 'file-loader',
@@ -55,6 +78,9 @@ module.exports = {
   plugins: [
     // https://github.com/johnagan/clean-webpack-plugin
     new CleanWebpackPlugin(['dist']),
+
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
     // https://github.com/webpack-contrib/extract-text-webpack-plugin
     new ExtractTextPlugin('changeme.css'),
     // Set jQuery in global scope
@@ -76,5 +102,12 @@ module.exports = {
       from: path.resolve(__dirname, 'src/icons'),
       to: path.resolve(__dirname, 'dist/icons')
     }]),
+    new htmlWebpackPlugin({
+      // hash: true,
+      // title: 'My Awesome application',
+      // myPageHeader: 'Hello World',
+      template: './src/index.php',
+      filename: './index.php' //relative to root of the application
+    }),
   ],
 };

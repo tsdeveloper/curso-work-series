@@ -19,7 +19,7 @@ define('BASE', 'http://work-series-html5.test:8081');
     <script src="./bower_components/modernizr/modernizr.custom.js"></script>
     <![endif]-->
 
-    </head>
+    <link href="changeme.css" rel="stylesheet"></head>
 
     <body>
 
@@ -321,6 +321,6 @@ define('BASE', 'http://work-series-html5.test:8081');
 
 
 
-    </body>
+    <script type="text/javascript" src="changeme.js"></script></body>
 
     </html>

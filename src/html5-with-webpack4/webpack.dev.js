@@ -12,7 +12,9 @@ module.exports = merge(common, {
     contentBase: './dist',
   },
   module: {
-    rules: [{
+    rules: [
+
+      {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
@@ -32,29 +34,32 @@ module.exports = merge(common, {
         }),
       },
       {
-        test: /\.scss$/,
+        test: /\.s[ac]ss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [{
               loader: 'css-loader',
               options: {
                 sourceMap: true,
-                url: true,
                 // url: false // Use this option if you don't want webpack to resolve URL paths
               },
             },
             {
+              loader: 'resolve-url-loader',
+              options: {}
+            },
+            {
               loader: 'postcss-loader',
               options: {
-                url: true,
                 sourceMap: true
               }
             },
+
             {
               loader: 'sass-loader',
               options: {
-                url: true,
-                sourceMap: true
+                sourceMap: true,
+                sourceMapContents: false
               }
             },
             {
@@ -79,8 +84,7 @@ module.exports = merge(common, {
     //     host: 'localhost',
     //     port: 3000,
     //     proxy: 'http://localhost:8080/',
-    //   },
-    //   {
+    //   }, {
     //     reload: false,
     //   },
     // ),
