@@ -23,7 +23,7 @@ define('BASE', 'http://work-series-html5.test:8081');
     <script src="./bower_components/modernizr/modernizr.custom.js"></script>
     <![endif]-->
 
-    <link href="styles.css?4f2ee46316bd0066db41" rel="stylesheet"></head>
+    <link href="styles.css?24d5b2d8e8255c6ab7be" rel="stylesheet"></head>
 
     <body>
 
@@ -81,7 +81,7 @@ define('BASE', 'http://work-series-html5.test:8081');
                 </header>
 
                 <!-- VIDEO -->
-                <video class="video video-large main_video video-shadow" src="<?= BASE; ?>/midias/apresentacao.mp4" width="400" controls></video>
+                <video class="vga vga-large main_vga vga-shadow" src="<?= BASE; ?>/midias/apresentacao.mp4" width="400" controls></video>
                 <aside class="al-center">
                     <h1>
                         <a href="#" class="btn btn-blue radius" title="Buy HTML 5 Pro" target="_blank"> Buy</a> HTML 5 Pro</h1>
@@ -92,46 +92,48 @@ define('BASE', 'http://work-series-html5.test:8081');
             </div>
 
             <footer class="bg-green">
-                <section class="content">
+                <section class="content main_vgas" style="padding-bottom:10px">
                     <h1>Veja algumas aulas do Curso</h1>
 
-                    <article>
+                    <article class="box box-small">
                         <div class="thumb">
                             <div class="video_play"></div>
                             <img class="angular" alt="Angular JS" title="Framework Angular JS">
 
                         </div>
-                        <h1>Angular JS</h1>
+                        <h1 class="box_vga_title">Angular JS</h1>
                     </article>
 
-                    <article>
+                    <article class="box box-small">
                         <div class="thumb">
                             <div class="video_play"></div>
                             <img class="node" alt="Node JS" title="Framework Node JS">
 
                         </div>
-                        <h1>Node JS</h1>
+                        <h1 class="box_vga_title">Node JS</h1>
                     </article>
 
 
-                    <article>
+                    <article class="box box-small">
                         <div class="thumb">
                             <div class="video_play"></div>
                             <img class="sass" alt="Sass JS" title="Framework Sass JS">
 
                         </div>
-                        <h1>SASS CSS</h1>
+                        <h1 class="box_vga_title">SASS CSS</h1>
                     </article>
 
 
-                    <article>
+                    <article class="box box-small last">
                         <div class="thumb">
                             <div class="video_play"></div>
                             <img class="bower" alt="Bower JS" title="Framework Bower JS">
 
                         </div>
-                        <h1>Bower JS</h1>
+                        <h1 class="box_vga_title">Bower JS</h1>
                     </article>
+
+
                     <div class="clear"></div>
                 </section>
             </footer>
@@ -141,7 +143,7 @@ define('BASE', 'http://work-series-html5.test:8081');
         <section class="container bg-orange">
             <!-- container do title -->
             <div class="content">
-                <hgroup>
+                <hgroup class="sectiontitle sectiontitle-nomargin">
                     <h1>Conheça as Tecnologias JS e CSS</h1>
                     <h2>Sobre o Curso HTML5 Pro</h2>
                 </hgroup>
@@ -152,50 +154,53 @@ define('BASE', 'http://work-series-html5.test:8081');
             <div class="container bg-body">
 
                 <div class="content">
-                    <article>
+                    <article class="box box-small">
                         <img class="angular" alt="Angular JS" title="Framework Angular JS">
                         <h1>Angular JS</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
-                    <article>
+                    <article class="box box-small">
                         <img class="bower" alt="Bower JS" title="Framework Bower JS">
                         <h1>Bower JS</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
-                    <article>
+                    <article class="box box-small">
                         <img class="sass" alt="Sass JS" title="Framework Sass JS">
                         <h1>Sass CSS</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
-                    <article>
+                    <article class="box box-small last">
                         <img class="knockout" alt="Knockout JS" title="Framework Knockout JS">
                         <h1>Knockout JS</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
-                    <article>
+                    <article class="box box-small">
                         <img class="node" alt="Node JS" title="Framework Node JS">
                         <h1>Node JS</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
-                    <article>
+                    <article class="box box-small">
                         <img class="webpack" alt="WebPack JS" title="Framework WebPack JS">
                         <h1>WebPack</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
-                    <article>
+                    <article class="box box-small last">
                         <img class="vue" alt="Vue JS" title="Framework Vue JS">
                         <h1>Vue JS</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
+                    <div class="clear"></div>
                 </div>
+
             </div>
+
         </section>
 
 
@@ -328,6 +333,6 @@ define('BASE', 'http://work-series-html5.test:8081');
         </footer>
 
 
-    <script src="vendor/jquery/dist/jquery.min.js"></script><script src="app.b6a3846c561858396ba3.js?4f2ee46316bd0066db41"></script></body>
+    <script src="vendor/jquery/dist/jquery.min.js"></script><script src="app.b6a3846c561858396ba3.js?24d5b2d8e8255c6ab7be"></script></body>
 
     </html>

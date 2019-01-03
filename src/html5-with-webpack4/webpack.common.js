@@ -272,7 +272,6 @@ module.exports = {
     // https://webpack.js.org/plugins/provide-plugin/
 
 
-
     // new CopyWebpackPlugin([{
     //   from: path.resolve(__dirname, 'src/img'),
     //   to: path.resolve(__dirname, 'dist/img'),
