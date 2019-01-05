@@ -81,7 +81,7 @@ define('BASE', 'http://work-series-html5.test:8081');
                 </header>
 
                 <!-- VIDEO -->
-                <video class="vga vga-large main_vga vga-shadow" src="<?= BASE; ?>/midias/apresentacao.mp4" width="400" controls></video>
+                <video class="vga vga-large main_vga animation animation_scale" src="<?= BASE; ?>/midias/apresentacao.mp4" width="400" controls></video>
                 <aside class="al-center">
                     <h1>
                         <a href="#" class="btn btn-blue radius" title="Buy HTML 5 Pro" target="_blank"> Buy</a> HTML 5 Pro</h1>
@@ -153,44 +153,46 @@ define('BASE', 'http://work-series-html5.test:8081');
             <!-- container dos artigos -->
             <div class="container bg-body">
 
-                <div class="content">
-                    <article class="box box-small">
+                <div class="content" style="padding:10px">
+                    <article class="main_tec_item box box-small al-center animation animation_scale radius">
                         <img class="angular"  alt="Angular JS" title="Framework Angular JS">
                         <h1>Angular JS</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
-                    <article class="box box-small">
+                    <article class="main_tec_item box box-small al-center animation animation_scale radius">
                         <img class="bower" alt="Bower JS" title="Framework Bower JS">
                         <h1>Bower JS</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
-                    <article class="box box-small">
+                    <article class="main_tec_item box box-small al-center animation animation_scale radius">
                         <img class="sass" alt="Sass JS" title="Framework Sass JS">
                         <h1>Sass CSS</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
-                    <article class="box box-small  last">
+                    <article class="main_tec_item box box-small al-center animation animation_scale radius  last">
                         <img class="knockout" alt="Knockout JS" title="Framework Knockout JS">
                         <h1>Knockout JS</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
-                    <article class="box box-small">
+                    <div class="box-line"></div>
+
+                    <article class="main_tec_item box box-small al-center animation animation_scale radius">
                         <img class="node" alt="Node JS" title="Framework Node JS">
                         <h1>Node JS</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
-                    <article class="box box-small">
+                    <article class="main_tec_item box box-small al-center animation animation_scale radius">
                         <img class="webpack" alt="WebPack JS" title="Framework WebPack JS">
                         <h1>WebPack</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>
                     </article>
 
-                    <article class="box box-small last">
+                    <article class="main_tec_item box box-small al-center animation animation_scale radius">
                         <img class="vue" alt="Vue JS" title="Framework Vue JS">
                         <h1>Vue JS</h1>
                         <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor quo porro</p>

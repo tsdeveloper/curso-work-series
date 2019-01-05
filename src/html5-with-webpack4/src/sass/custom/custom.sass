@@ -12,6 +12,7 @@
         background-size: cover
         &:hover
             background-color: #4d4c4c
+
 // MENU
 .main_nav
     width: auto
@@ -34,6 +35,7 @@
         margin-bottom: 10px
         padding-bottom: 8px
         border-bottom: 1px solid #ccc
+
     & li
         margin-bottom: 3px
         padding: 3px 0
@@ -52,8 +54,17 @@
         text-align: center
         line-height: 1.4
 
+
+.animation
+     transition: all .5s ease-in-out;
+     &:hover
+         box-shadow: -3px -4px 20px 7px rgba(0, 0, 0, 0.13)
+
+.animation_scale
+    transform: scale(1.1)
+
 .main_vga
-    margin-bottom: 24px
+    margin-bottom: 50px
     padding-bottom: 24px
 
 .main_vgas
@@ -79,3 +90,13 @@
         top: 0
         &:hover
             background-color: rgba(207,72,35,0.5)
+
+    // TEC CARACTERÍSTICAS
+.main_tec_item
+    padding: 15px 30px
+    margin-bottom: 30px
+    min-height: 330px
+    &:hover
+        background: #ff7c6d
+        color: #fff
+        box-shadow: 0px 30px 30px 0px rgba(0,0,0,0.3)

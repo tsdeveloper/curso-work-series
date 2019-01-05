@@ -88,7 +88,12 @@ module.exports = merge(common, {
       "window.jQuery": "jquery"
     }),
     // https://www.npmjs.com/package/webpack-notifier
-    new WebpackNotifierPlugin(),
+    new WebpackNotifierPlugin({
+      // alwaysNotify: false,
+      excludeWarnings: true,
+      title: 'Notification WebPack',
+      skipFirstNotification: true
+    }),
     // https://github.com/gajus/write-file-webpack-plugin
     new WriteFilePlugin({
       useHashIndex: true,

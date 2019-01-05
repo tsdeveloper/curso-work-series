@@ -193,7 +193,7 @@ module.exports = {
   },
   plugins: [
     // https://www.npmjs.com/package/webpack-notifier
-    new WebpackNotifier(),
+
     new CleanWebpackPlugin([path.resolve(__dirname, 'dist')]),
     new Webpack.ProvidePlugin({
       $: 'jquery',
@@ -215,7 +215,7 @@ module.exports = {
     //   ],
     //   ...
     // }),
-      // new InjectHtmlWebpackPlugin({
+    // new InjectHtmlWebpackPlugin({
     //   filename: './src/index.php',
     //   chunks: ['app', ],
     //   // processor: "http://cdn.example.com",
