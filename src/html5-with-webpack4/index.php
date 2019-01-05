@@ -1,4 +1,2 @@
 <?php
-require './dist/index.php';
-
-?>
+require_once './dist/index.php';
