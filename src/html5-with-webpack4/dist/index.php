@@ -23,7 +23,7 @@ define('BASE', 'http://work-series-html5.test:8081');
     <script src="./bower_components/modernizr/modernizr.custom.js"></script>
     <![endif]-->
 
-    <link href="styles.css?4ea37afd51d2da1862ba" rel="stylesheet"></head>
+    <link href="styles.css?5588eacf1df10a6550ab" rel="stylesheet"></head>
 
     <body>
 
@@ -335,6 +335,6 @@ define('BASE', 'http://work-series-html5.test:8081');
         </footer>
 
 
-    <script src="vendor/jquery/dist/jquery.min.js"></script><script src="app.24ad80e9dab1b926e4a1.js?4ea37afd51d2da1862ba"></script></body>
+    <script src="vendor/jquery/dist/jquery.min.js"></script><script src="app.b6a3846c561858396ba3.js?5588eacf1df10a6550ab"></script></body>
 
     </html>
