@@ -1,0 +1,12 @@
+{
+    "name": "web-programmer/html5-with-webpack4",
+    "require": {
+        "heroku/heroku-buildpack-php": "^148.0"
+    },
+    "authors": [
+        {
+            "name": "Build Code Developer",
+            "email": "build.code.developer@gmail.com"
+        }
+    ]
+}
