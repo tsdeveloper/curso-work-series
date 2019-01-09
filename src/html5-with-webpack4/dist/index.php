@@ -23,7 +23,7 @@ define('BASE', 'http://work-series-html5.test:8081');
     <script src="./bower_components/modernizr/modernizr.custom.js"></script>
     <![endif]-->
 
-<link href="styles.css?0ae892fa4d70f354a80f" rel="stylesheet"></head>
+<link href="styles.css?ad702eb2385642762be2" rel="stylesheet"></head>
 
 <body>
 
@@ -31,7 +31,7 @@ define('BASE', 'http://work-series-html5.test:8081');
         <div class="content">
 
             <h1 class="main_logo fl-left fontzero">
-                <a class="radius" title="home" href="">Curso Work Series - HTML 5 do Jeito Certo</a>
+                <a class="radius-default" title="home" href="">Curso Work Series - HTML 5 do Jeito Certo</a>
             </h1>
 
             <ul class="main_nav fl-right">
@@ -56,7 +56,7 @@ define('BASE', 'http://work-series-html5.test:8081');
                     <a href="<?= BASE; ?>/micro-dados" title="Distribuição com Micro Dados">Micro Dados</a>
                 </li>
                 <li>
-                    <a href="<?= BASE; ?>/sobre-curso" class="btn btn-green radius boxshadow" title="Sobre o Curso">Curso</a>
+                    <a href="<?= BASE; ?>/sobre-curso" class="btn btn-green radius-default boxshadow" title="Sobre o Curso">Curso</a>
                 </li>
 
             </ul>
@@ -70,13 +70,13 @@ define('BASE', 'http://work-series-html5.test:8081');
     <!-- bloco de vídeo -->
     <article class="container">
         <div class="content">
-            <header>
-                <hgroup class="sectiontitle">
+            <header class="sectiontitle">
+                <!-- <hgroup class="sectiontitle"> -->
                     <h1>Conheça o Curso CSS Layout</h1>
-                    <h2>Aprsentação Curso
+                    <p class="tagline">Aprsentação Curso
                         <mark>HTML 5 Pro</mark>
-                    </h2>
-                </hgroup>
+                    </p>
+                <!-- </hgroup> -->
 
             </header>
 
@@ -84,7 +84,7 @@ define('BASE', 'http://work-series-html5.test:8081');
             <video class="vga vga-large main_vga animation animation_scale" src="<?= BASE; ?>/midias/apresentacao.mp4" width="400" controls></video>
             <aside class="al-center">
                 <h1>
-                    <a href="#" class="btn btn-blue radius" title="Buy HTML 5 Pro" target="_blank"> Buy</a> HTML 5 Pro</h1>
+                    <a href="#" class="btn btn-blue radius-default" title="Buy HTML 5 Pro" target="_blank"> Buy</a> HTML 5 Pro</h1>
             </aside>
             <!-- VIDEO -->
             <div class="clear"></div>
@@ -142,11 +142,11 @@ define('BASE', 'http://work-series-html5.test:8081');
     <!-- seção relacional -->
     <section class="container bg-orange">
         <!-- container do title -->
-        <div class="content">
-            <hgroup class="sectiontitle sectiontitle-nomargin">
+        <div class="content sectiontitle sectiontitle-nomargin">
+            <!-- <hgroup class="sectiontitle sectiontitle-nomargin"> -->
                 <h1>Conheça as Tecnologias JS e CSS</h1>
-                <h2>Sobre o Curso HTML5 Pro</h2>
-            </hgroup>
+                <p class="tagline">Sobre o Curso HTML5 Pro</p>
+            <!-- </hgroup> -->
             <div class="clear"></div>
         </div>
 
@@ -154,28 +154,28 @@ define('BASE', 'http://work-series-html5.test:8081');
         <div class="container bg-body">
 
             <div class="content" style="padding:10px">
-                <article class="main_tec_item box box-small al-center animation animation_scale radius">
+                <article class="main_tec_item box box-small al-center animation animation_scale radius-default radius-small radius-smallradius-small">
                     <img class="angular" alt="Angular JS" title="Framework Angular JS">
                     <h1>Angular JS</h1>
                     <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor
                         quo porro</p>
                 </article>
 
-                <article class="main_tec_item box box-small al-center animation animation_scale radius">
+                <article class="main_tec_item box box-small al-center animation animation_scale radius-default radius-small">
                     <img class="bower" alt="Bower JS" title="Framework Bower JS">
                     <h1>Bower JS</h1>
                     <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor
                         quo porro</p>
                 </article>
 
-                <article class="main_tec_item box box-small al-center animation animation_scale radius">
+                <article class="main_tec_item box box-small al-center animation animation_scale radius-default radius-small">
                     <img class="sass" alt="Sass JS" title="Framework Sass JS">
                     <h1>Sass CSS</h1>
                     <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor
                         quo porro</p>
                 </article>
 
-                <article class="main_tec_item box box-small al-center animation animation_scale radius last">
+                <article class="main_tec_item box box-small al-center animation animation_scale radius-default radius-small radius-small last">
                     <img class="knockout" alt="Knockout JS" title="Framework Knockout JS">
                     <h1>Knockout JS</h1>
                     <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor
@@ -184,21 +184,21 @@ define('BASE', 'http://work-series-html5.test:8081');
 
                 <div class="box-line"></div>
 
-                <article class="main_tec_item box box-small al-center animation animation_scale radius">
+                <article class="main_tec_item box box-small al-center animation animation_scale radius-default radius-small">
                     <img class="node" alt="Node JS" title="Framework Node JS">
                     <h1>Node JS</h1>
                     <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor
                         quo porro</p>
                 </article>
 
-                <article class="main_tec_item box box-small al-center animation animation_scale radius">
+                <article class="main_tec_item box box-small al-center animation animation_scale radius-default radius-small">
                     <img class="webpack" alt="WebPack JS" title="Framework WebPack JS">
                     <h1>WebPack</h1>
                     <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor
                         quo porro</p>
                 </article>
 
-                <article class="main_tec_item box box-small al-center animation animation_scale radius">
+                <article class="main_tec_item box box-small al-center animation animation_scale radius-default radius-small">
                     <img class="vue" alt="Vue JS" title="Framework Vue JS">
                     <h1>Vue JS</h1>
                     <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe dolor
@@ -224,22 +224,22 @@ define('BASE', 'http://work-series-html5.test:8081');
 
             </div>
 
-            <article>
+            <article class="main_info box box-small">
                 <h1>Temo em Aula:
                     <b>23h</b>
                 </h1>
             </article>
-            <article>
+            <article class="main_info box box-small">
                 <h1>Certificado de :
                     <b>230h</b>
                 </h1>
             </article>
-            <article>
+            <article class="main_info box box-small">
                 <h1>Módulos:
                     <b>8</b>
                 </h1>
             </article>
-            <article>
+            <article class="main_info box box-small last">
                 <h1>Vídeo Aulas:
                     <b>50</b>
                 </h1>
@@ -250,22 +250,25 @@ define('BASE', 'http://work-series-html5.test:8081');
 
     <!-- retormada e conversão -->
     <article class="container bg-blue">
-        <div class="content content-page">
-            <header>
-                <hgroup class="sectiontitle">
+        <div class="content content-page al-center">
+            <header class="sectiontitle">
+                <!-- <hgroup class="sectiontitle"> -->
                     <h1>Faça parte da turma de HTML 5 Pro</h1>
-                    <h2>Começe agora mesmo. O Curo é de
+                    <p class="tagline">Começe agora mesmo. O Curo é de
                         <mark>HTML Pro EAD</mark>
-                    </h2>
-                </hgroup>
+                    </p>
+                <!-- </hgroup> -->
 
             </header>
 
-            <a href="#" title="Curso Work Series - HTML 5 do Jeito Certo" target="_blank">
+            <a class="btn btn-green btn-big radius-default" href="#" title="Curso Work Series - HTML 5 do Jeito Certo" target="_blank">
+                Link do curso
             </a>
 
             <footer>
-                <div>Curso Work Series - HTML 5 do Jeito Certo.Estudo garantido EAD</div>
+                <div class="main_chamada">
+                    Curso Work Series - HTML 5 do Jeito Certo.Estudo garantido EAD.
+                </div>
             </footer>
 
             <div class="clear"></div>
@@ -346,6 +349,6 @@ define('BASE', 'http://work-series-html5.test:8081');
     </footer>
 
 
-<script src="vendor/jquery/dist/jquery.min.js"></script><script src="app.b6a3846c561858396ba3.js?0ae892fa4d70f354a80f"></script></body>
+<script src="vendor/jquery/dist/jquery.min.js"></script><script src="app.b6a3846c561858396ba3.js?ad702eb2385642762be2"></script></body>
 
 </html>
