@@ -19,7 +19,7 @@ define('BASE', 'http://work-series-html5.test:8081');
     <script src="./bower_components/modernizr/modernizr.custom.js"></script>
     <![endif]-->
 
-    <link href="styles.css" rel="stylesheet"></head>
+    </head>
 
     <body>
 

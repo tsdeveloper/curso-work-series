@@ -1,11 +1,18 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+<<<<<<< HEAD
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 // const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+=======
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+>>>>>>> feature-webpack-4
 
 const devMode = process.env.NODE_ENV !== 'production'
 
@@ -16,6 +23,7 @@ module.exports = {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'public')
     },
+<<<<<<< HEAD
     // optimization: {
     //     minimizer: [
     //         new UglifyJsPlugin({
@@ -120,6 +128,44 @@ module.exports = {
             //             ]
             //         })
             //     },
+=======
+    // devtool: 'source-map',
+    module: {
+        rules: [
+
+            {
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: ['css-loader', 'postcss-loader']
+                })
+            },
+            {
+                test: /\.s?[ac]ss$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: [{
+                            loader: 'css-loader',
+                            options: {
+                                sourceMap: false
+                            }
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                sourceMap: false
+                            }
+                        },
+                        {
+                            loader: 'sass-loader',
+                            options: {
+                                sourceMap: false
+                            }
+                        }
+                    ]
+                })
+            },
+>>>>>>> feature-webpack-4
             // {
             //     test: /\.css$/,
             //     use: [
@@ -186,7 +232,44 @@ module.exports = {
             //     })
 
             // },
+<<<<<<< HEAD
 
+=======
+            // {
+            //     test: /\.(jpe?g|png|gif|svg|mp4)$/i,
+            //     use: [{
+            //         loader: 'file-loader',
+            //         options: {},
+            //     }, ]
+            // },
+            // Copy static assets over with file-loader
+            {
+                test: /\.(ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]'
+                },
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: 'file-loader',
+                options: {
+                    name: 'fonts/[name].[ext]'
+                },
+            },
+            {
+                test: /\.(jpg|gif|png|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: 'file-loader',
+                options: {
+                    name: 'images/[name].[ext]'
+                },
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader'
+            }
+>>>>>>> feature-webpack-4
 
         ]
     },
@@ -209,6 +292,7 @@ module.exports = {
             template: './index.php',
             filename: './index.php' //relative to root of the application
         }),
+<<<<<<< HEAD
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
             // both options are optional
@@ -219,6 +303,16 @@ module.exports = {
         }),
 
         // new ExtractTextPlugin("styles.css"),
+=======
+        // new MiniCssExtractPlugin({
+        //     // Options similar to the same options in webpackOptions.output
+        //     // both options are optional
+        //     filename: '[name].css',
+        //     chunkFilename: '[id].css'
+        // }),
+
+        new ExtractTextPlugin("styles.css"),
+>>>>>>> feature-webpack-4
 
         new CopyWebpackPlugin([{
             from: path.resolve(__dirname, 'src/assets/img'),
@@ -229,6 +323,7 @@ module.exports = {
             from: path.resolve(__dirname, 'src/assets/midias'),
             to: path.resolve(__dirname, 'public/midias')
         }]),
+<<<<<<< HEAD
         // new OptimizeCSSAssetsPlugin({
         //     cssProcessorOptions: {
         //         map: {
@@ -236,6 +331,8 @@ module.exports = {
         //         }
         //     }
         // }),
+=======
+>>>>>>> feature-webpack-4
     ],
 
 };
